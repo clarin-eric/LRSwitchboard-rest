@@ -3,14 +3,11 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Matcher.js (for rest-based service)
-// Time-stamp: <2018-07-12 13:36:36 (zinn)>
+// Time-stamp: <2018-07-12 20:31:21 (zinn)>
 // -------------------------------------------
 
 import uuid from 'node-uuid';
 import Registry from './Registry.js';
-
-// todo: might be filter similar to language and mimetype
-import {inclToolsReqAuth} from './util';
 
 export default class Matcher {
 
