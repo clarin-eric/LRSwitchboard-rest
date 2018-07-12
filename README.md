@@ -24,10 +24,11 @@ design, which is served at
 
 
 # Status
-The rest-based interface is currently being developed and actively maintained. It has no official release yet.
-For more information on the switchboard, see
+
+The rest-based interface of the LRSwitchboard is currently being developed and actively
+maintained. It has no official release yet.  For more information on the switchboard, see
 
 ```https://github.com/clarin-eric/LRSwitchboard ```
-*
+
 
 
