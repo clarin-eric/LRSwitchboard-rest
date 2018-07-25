@@ -3,7 +3,7 @@
 // 2018- Claus Zinn, University of Tuebingen
 // 
 // File: index.js (for rest-based service)
-// Time-stamp: <2018-07-12 12:28:15 (zinn)>
+// Time-stamp: <2018-07-25 09:32:19 (zinn)>
 // -------------------------------------------
 
 
@@ -34,11 +34,11 @@ const PORT = 8080;
 const HOST = '0.0.0.0';
 
 app.get('/', function (req, res) {
-    res.send('Hello World! This will show the REST API doc page.')
+    res.sendfile('./index.html');
 })
     
 app.get('/api', function (req, res) {
-    res.send('Hello World! This will show the REST API doc page.')
+    res.sendfile('./index.html');    
 })
 
 /* for getAllTools, we allow same parameters than getApplicableTools, with default values as follows:
