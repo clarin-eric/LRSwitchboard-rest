@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The CLARIN Language Resource Switchboard -- Matcher API</title>
+  <meta name="description" content="This API describes the REST API for the CLARIN Language Resource Switchboard">
+  <meta name="author: Claus Zinn" content="API specificiation of the CLARIN LRS, first draft by CZ">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <script src="js/scripts.js"></script>
+  <h1>REST API Specification of the CLARIN Language Resource Switchboard</h1>
+  
+  <h2>User Endpoints</h2>
+  
+  <ul>
+    <li><code>GET /</code>: returns this html page.</li>
+    <li><code>GET /api</code>: returns this html page.</li>
+    <li><code>GET /getAllTools</code>: returns a JSON document with descriptions of all tools registered with the switchboard</li>
+    <li><code>GET /getTools?language=[LANG]&includeWS=[BOOL]&mimetype=[MIMETYPE]&sortBy=[SORT]&includeToolsReqAuth=[BOOL]</code>: returns a JSON document with descriptions of all tools registered with the switchboard that match the designated values supplied by the arguments (any order permitted):
+      <ul>
+	<li><code>[LANG]</code>a language identifier following <a href="https://iso639-3.sil.org/code_tables/639/data">ISO 639-3</a></li>
+	<li><code>[MIMETYPE]</code>a mimetype identifier following the <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">classification of IANA.org</a></li>
+	<li><code>[SORT]</code>one of 'tasks' or 'tools' (without quotes)</li>
+	<li><code>[BOOL]</code>one of 'true' or 'false'  (without quotes</li>
+    </li>    
+    </ul>
+  </ul>
+  
+  <h2>Server Information</h2>
+  A (prototypical) server has been set up at <a href="https://weblicht.sfs.uni-tuebingen.de/clrs-rest">https://weblicht.sfs.uni-tuebingen.de/clrs-rest</a>.
+
+  <h2>Example calls</h2>
+  <ul>
+    <li><code>https://weblicht.sfs.uni-tuebingen.de/clrs-rest/api/getTools?language=eng&includeWS=true&mimetype=application%2Fpdf&sortBy=tasks&includeToolsReqAuth=true</code>
+	  <p>
+	    Retrieve all tools capable of processing English text encoded in PDF format. Also
+	    include web services, and tools that require authentication. Sort the result by tasks.
+	  </p>
+    </li>
+    <li><code>
+    https://weblicht.sfs.uni-tuebingen.de/clrs-rest/api/getTools?language=tur&includeWS=false&mimetype=text%2Fplain&sortBy=tools&includeToolsReqAuth=true
+      </code>
+      <p>
+	Retrieve all tools capable of processing Turkish plain text documents. Do not include
+	web services, but include tools requiring authentication. Sort the result by tools.
+      </p>
+    </li>
+  </ul>
+
+  <h2>Example calls</h2>
+  <p>
+    The second call from above yields the following <a href="exampleResult.json">json document (with indentation)</a>.
+    When rendered in PDF, with added line numbers, this looks like this:
+   </p>
+  <img src="./exampleJSON_page1.png" alt="Example REST Result (page 1)" height="1200" width="800">
+  <img src="./exampleJSON_page2.png" alt="Example REST Result (page 2)" height="1200" width="800">  
+</body>
+</html>
