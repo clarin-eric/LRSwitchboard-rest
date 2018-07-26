@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Matcher.js (for rest-based service)
-// Time-stamp: <2018-07-12 20:31:21 (zinn)>
+// Time-stamp: <2018-07-26 09:43:03 (zinn)>
 // -------------------------------------------
 
 import uuid from 'node-uuid';
@@ -110,9 +110,9 @@ export default class Matcher {
 		}
 	    }	    
 
-	    // default is yes
-	    if (key == "sortTools" ) {
-		if (query[key] == "no" ) {
+	    // default is tasks
+	    if (key == "sortBy" ) {
+		if (query[key] == "tools" ) {
 		    sortToolsP = false;
 		}
 	    }

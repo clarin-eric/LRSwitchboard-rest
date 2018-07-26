@@ -14,18 +14,29 @@
   <script src="js/scripts.js"></script>
   <h1>REST API Specification of the CLARIN Language Resource Switchboard</h1>
   
-  <h2>User Endpoints</h2>
+  <h2>User Endpoints (working)</h2>
   
   <ul>
     <li><code>GET /</code>: returns this html page.</li>
     <li><code>GET /api</code>: returns this html page.</li>
-    <li><code>GET /tools?language=[LANG]&includeWS=[BOOL]&mimetype=[MIMETYPE]&sortBy=[SORT]&includeToolsReqAuth=[BOOL]</code>: returns a JSON document with descriptions of all tools registered with the switchboard that match the designated values supplied by the arguments (any order permitted):
+    <li><code>GET /api/tools?language=[LANG]&includeWS=[BOOL]&mimetype=[MIMETYPE]&sortBy=[SORT]&includeToolsReqAuth=[BOOL]</code>: returns a JSON document with descriptions of all tools registered with the switchboard that match the designated values supplied by the arguments (any order permitted):
       <ul>
-	<li><code>?language=[LANG]</code>find tools that can process language <code>[LANG]</code>, a language identifier following <a href="https://iso639-3.sil.org/code_tables/639/data">ISO 639-3</a></li>
-	<li><code>?mimetype=[MIMETYPE]</code>find tools that can process mimetype <code>[MIMETYPE]</code>, a mimetype identifier following the <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">classification of IANA.org</a></li>
-	<li><code>?includeWS=[BOOL]</code>include web services in the result set, with <code>[BOOL]</code> being one of 'true' or 'false'  (without quotes</li>
-	<li><code>includeToolsReqAuth=[BOOL]</code>include tools (and web services) that require authentication, with <code>[BOOL]</code> being one of 'true' or 'false'  (without quotes</li>	
-	<li><code>?sortBy=[SORT]</code>sort result set according to <code>[SORT]</code>, being one of 'tasks' or 'tools' (without quotes)</li>
+	<li><code>?language=[LANG]</code>: find tools that can process
+	language <code>[LANG]</code>, a language identifier
+	  following <a href="https://iso639-3.sil.org/code_tables/639/data">ISO 639-3</a>.
+	</li>
+	<li><code>?mimetype=[MIMETYPE]</code>: find tools that can process
+	mimetype <code>[MIMETYPE]</code>, a mimetype identifier following
+	the <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">classification
+	of IANA.org</a>.
+	</li>
+	<li><code>?includeWS=[BOOL]</code>: include web services in the result set, with <code>[BOOL]</code> being one of 'true' or 'false'  (without quotes).
+	</li>
+	<li><code>includeToolsReqAuth=[BOOL]</code>:include tools (and web services) that require authentication, with <code>[BOOL]</code> being one of 'true' or 'false'  (without quotes).
+	</li>	
+	<li><code>?sortBy=[SORT]</code>sort result set according to <code>[SORT]</code>, being one
+	  of 'tasks' or 'tools' (without quotes). Defaults to 'tasks'.
+	</li>
     </li>    
     </ul>
   </ul>
@@ -46,7 +57,7 @@
     <li><code>GET https://weblicht.sfs.uni-tuebingen.de/clrs-rest/api/tools</code>
 	  <p>
 	    Retrieve all tools. No filters are applied. By default, tools are sorted by tasks,
-	    tools requiring authentication are included, web services are not included
+	    tools requiring authentication are included, web services are not included.
 	  </p>
     </li>
     <li><code>GET https://weblicht.sfs.uni-tuebingen.de/clrs-rest/api/tools?includeWS=yes</code>
@@ -57,11 +68,11 @@
     <li><code>GET https://weblicht.sfs.uni-tuebingen.de/clrs-rest/api/tools?language=eng&includeWS=true&mimetype=application%2Fpdf&sortBy=tasks&includeToolsReqAuth=true</code>
 	  <p>
 	    Retrieve all tools capable of processing English text encoded in PDF format. Also
-	    include web services, and tools that require authentication. Sort the result by tasks.
+	    include web services, and also include tools that require authentication. Sort the
+	    result by tasks (task-oriented view), but which is the default value anyway.
 	  </p>
     </li>    
-    <li><code>
-	GET https://weblicht.sfs.uni-tuebingen.de/clrs-rest/api/tools?language=tur&includeWS=false&mimetype=text%2Fplain&sortBy=tools&includeToolsReqAuth=true
+    <li><code>GET https://weblicht.sfs.uni-tuebingen.de/clrs-rest/api/tools?language=tur&includeWS=false&mimetype=text%2Fplain&sortBy=tools&includeToolsReqAuth=true
       </code>
       <p>
 	Retrieve all tools capable of processing Turkish plain text documents. Do not include
@@ -76,6 +87,32 @@
     When rendered in PDF, with added line numbers, this looks like this:
    </p>
   <img src="/clrs-rest/doc/exampleJSON_page1.png" alt="Example REST Result (page 1)" height="1200" width="800">
-  <img src="/clrs-rest/doc/exampleJSON_page2.png" alt="Example REST Result (page 2)" height="1200" width="800">  
+  <img src="/clrs-rest/doc/exampleJSON_page2.png" alt="Example REST Result (page 2)" height="1200" width="800">
+
+  <h2>User Endpoints (in preparation, working draft)</h2>
+  
+  <ul>
+    <li><code>GET /api/tool?id=[TOOLID]</code>: returns a JSON document that contains the
+    description of the tool with given <code>TOOLID</code></li>
+    
+    <li><code>PUT /api/tool_activate?id=[TOOLID]</code>: returns a JSON document that confirms that
+      the tool with <code>TOOLID</code> has been activated</li>
+    
+    <li><code>PUT /api/tool_deactivate?id=[TOOLID]</code>: returns a JSON document that confirms
+    that the tool with <code>TOOLID</code> has been deactivated</li>
+    
+    <li><code>POST /api/tool?id=[TOOLID]?def=[TOOLDEF]</code>: returns a JSON document that
+    confirms that the tool with <code>TOOLID</code> has been created. The tool is not activated
+    yet.
+      <p>Returns 201 (Created) if tool entry has been created; returns 200 (OK) if an existing
+      resource is modified.</p>
+    </li>
+    
+    <li><code>DELETE /api/tool?id=[TOOLID]</code>: deletes a tool with the
+    given <code>TOOLID</code> from the registry.
+      <p>Returns 200 (OK). Returns 404 (Not Found), if ID not found or invalid.</p>
+    </li>      
+  </ul>
+  
 </body>
 </html>
