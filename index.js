@@ -3,7 +3,7 @@
 // 2018- Claus Zinn, University of Tuebingen
 // 
 // File: index.js (for rest-based service)
-// Time-stamp: <2018-07-25 12:45:34 (zinn)>
+// Time-stamp: <2018-07-26 13:52:38 (zinn)>
 // -------------------------------------------
 
 
@@ -69,6 +69,17 @@ app.get('/api/tools/', function(req, res) {
     console.log('/api/tools', req);    
     res.send( new Matcher().findApplicableTools( req.query ) );    
 });
+
+/*
+
+Tool ids are assigned during matching. They are not persistent. Might want to give each tool
+a hardwired id when registered with the registry (todo)
+
+app.get('/api/tool/', function(req, res) {
+    console.log('/api/tools', req);    
+    res.send( new Matcher().findApplicableTools( req.query ) );    
+});
+*/
 
 app.listen(PORT, HOST);
 

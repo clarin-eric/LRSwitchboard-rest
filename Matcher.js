@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Matcher.js (for rest-based service)
-// Time-stamp: <2018-07-26 09:43:03 (zinn)>
+// Time-stamp: <2018-07-26 13:54:46 (zinn)>
 // -------------------------------------------
 
 import uuid from 'node-uuid';
@@ -53,6 +53,27 @@ export default class Matcher {
 	return toolGroups;
     }
 
+    // todo, see comments in index.js
+
+    /*
+    getTool( query ) {
+	var selectedTools = this.registeredTools;
+	for (var key in query){
+	    
+	    console.log('key/val', key, query[key]);
+	    if ( key == "id" ) {
+		selectedTools = selectedTools.filter(
+		    (tool) =>  {
+			if (tool.id.indexOf(query[key]) != -1) {
+			    return tool;
+			}
+		    });
+	    }
+	}
+	return selectedTools;
+    }
+    */
+	    
     findApplicableTools( query ) {
 	
 	var selectedTools = this.registeredTools;
