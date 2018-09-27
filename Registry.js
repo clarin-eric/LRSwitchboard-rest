@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Registry.js
-// Time-stamp: <2018-06-07 13:58:14 (zinn)>
+// Time-stamp: <2018-09-27 13:10:22 (zinn)>
 // -------------------------------------------
 
 const Registry = [
@@ -2866,7 +2866,7 @@ const Registry = [
     
     {
 	"task": "Morpho-syntactic tagger",
-	"name": "morphoDiTa",
+	"name": "MorphoDiTa",
 	"logo": "clarin-pl.png",	
 	"homepage": "http://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
