@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Registry.js
-// Time-stamp: <2018-09-27 13:10:22 (zinn)>
+// Time-stamp: <2018-10-16 10:40:55 (zinn)>
 // -------------------------------------------
 
 const Registry = [
@@ -1270,6 +1270,57 @@ const Registry = [
 	}
     },
 
+    {
+	"task": "Dependency Parsing",
+	"name": "Spacy (hosted by D4Science)",
+	"logo": "d4science.png",		  	    
+	"homepage": "https://www.d4science.org",
+	"location": "Pisa, Italy",		  		  		  
+	"creators": "D4Science staff",
+	"contact": {
+	    "person": "D4Science Support",
+	    "email": "claus.zinn@sfs.uni-tuebingen.de"
+	},	    
+	"version": "v1.0",
+	"authentication": "no",		  
+	"licence": "public",
+	"description": "This is an experimental integration of a D4Science NLP processing service (spaCy). This service identifies performs dependency parsing for plain German text. For more information on spaCy, see https://spacy.io.",
+	"languages": ["ger"],
+	"langEncoding": "639-1",		  // not used
+	"mimetypes": ["text/plain"],
+	"output": ["text/tab-separated-values"],
+	"url": "https://next.d4science.org/nlp-hub-spacyGerman/",		  
+	"parameters": {
+	    "input" :     "self.linkToResource",
+	    "token":      "27061e4d-3567-482d-9f12-3a1af5e42ab9-843339462"
+	}
+    },
+
+    {
+	"task": "Dependency Parsing",
+	"name": "Spacy (hosted by D4Science)",
+	"logo": "d4science.png",		  	    
+	"homepage": "https://www.d4science.org",
+	"location": "Pisa, Italy",		  		  		  
+	"creators": "D4Science staff",
+	"contact": {
+	    "person": "D4Science Support",
+	    "email": "claus.zinn@sfs.uni-tuebingen.de"
+	},	    
+	"version": "v1.0",
+	"authentication": "no",		  
+	"licence": "public",
+	"description": "This is an experimental integration of a D4Science NLP processing service (spaCy). This service identifies performs dependency parsing for plain English text. For more information on spaCy, see https://spacy.io.",
+	"languages": ["eng"],
+	"langEncoding": "639-1",		  // not used
+	"mimetypes": ["text/plain"],
+	"output": ["text/tab-separated-values"],
+	"url": "https://next.d4science.org/nlp-hub-spacyEnglish/",		  
+	"parameters": {
+	    "input" :     "self.linkToResource",
+	    "token":      "27061e4d-3567-482d-9f12-3a1af5e42ab9-843339462"
+	}
+    },
    
     {
 	"task": "Named Entity Recognition",

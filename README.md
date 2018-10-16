@@ -17,7 +17,7 @@ The switchboard is open for business at
 
 ```https://switchboard.clarin.eu ```
 
-For the time being, note however that only the development version of the switchboard makes use of the new
+Now, both the production and development version of the switchboard make use of the new
 design, which is served at
 
 ```https://weblicht.sfs.uni-tuebingen.de/clrs-dev/#/ ```
