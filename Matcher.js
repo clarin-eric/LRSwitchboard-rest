@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Matcher.js (for rest-based service)
-// Time-stamp: <2018-07-26 13:54:46 (zinn)>
+// Time-stamp: <2018-10-16 15:26:12 (zinn)>
 // -------------------------------------------
 
 import uuid from 'node-uuid';
@@ -40,6 +40,7 @@ export default class Matcher {
 		langEncoding    : entry.langEncoding,
 		output          : entry.output,
 		softwareType    : entry.softwareType,
+		lifecycle       : entry.lifecycle,		
 		requestType     : entry.requestType,
 		mapping         : entry.mapping,
 	    } ];
@@ -112,6 +113,19 @@ export default class Matcher {
 			(tool) =>   {
 			    if ((tool.softwareType == undefined) ||
 				(! (tool.softwareType == "webService")) ) {
+				tool.id = uuid.v4();			    
+				return tool;
+			    }
+			});		
+		}
+	    }
+
+	    if (key == "includeBetaSoftware" ) {
+		if (query[key] == "no" ) {
+		    selectedTools = selectedTools.filter(
+			(tool) =>   {
+			    if ((tool.lifecycle == undefined) ||
+				(! (tool.lifecycle == "beta")) ) {
 				tool.id = uuid.v4();			    
 				return tool;
 			    }

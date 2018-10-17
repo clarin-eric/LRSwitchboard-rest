@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Registry.js
-// Time-stamp: <2018-10-16 10:40:55 (zinn)>
+// Time-stamp: <2018-10-16 15:23:37 (zinn)>
 // -------------------------------------------
 
 const Registry = [
@@ -1273,6 +1273,7 @@ const Registry = [
     {
 	"task": "Dependency Parsing",
 	"name": "Spacy (hosted by D4Science)",
+	"lifecycle": "beta",
 	"logo": "d4science.png",		  	    
 	"homepage": "https://www.d4science.org",
 	"location": "Pisa, Italy",		  		  		  
@@ -1299,6 +1300,7 @@ const Registry = [
     {
 	"task": "Dependency Parsing",
 	"name": "Spacy (hosted by D4Science)",
+	"lifecycle": "beta",
 	"logo": "d4science.png",		  	    
 	"homepage": "https://www.d4science.org",
 	"location": "Pisa, Italy",		  		  		  
