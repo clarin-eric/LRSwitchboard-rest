@@ -15,7 +15,7 @@
 
 Open, for instance,
 
-   ```http://localhost:4511/api/getAllTools?includeWS=no&language=tur&sortTools=yes ```
+   ```http://localhost:4511/api/tools?includeWS=no&language=tur&sortTools=yes&includeBetaSoftware=no ```
 
 in your browser to get json-based results on tools that match resource characterics.
 
