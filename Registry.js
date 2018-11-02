@@ -3,11 +3,11 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Registry.js
-// Time-stamp: <2018-11-02 09:57:22 (zinn)>
+// Time-stamp: <2018-11-02 10:00:15 (zinn)>
 // -------------------------------------------
 
 const Registry = [
-    { "task": "task": "Shallow Parsing",
+    { "task": "Shallow Parsing",
       "name": "Iobber",
       "logo": "clarin-pl.png",
       "homepage": "http://ws.clarin-pl.eu",
