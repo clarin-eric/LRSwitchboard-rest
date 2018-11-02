@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Registry.js
-// Time-stamp: <2018-10-16 15:23:37 (zinn)>
+// Time-stamp: <2018-11-02 09:53:55 (zinn)>
 // -------------------------------------------
 
 const Registry = [
@@ -1588,7 +1588,7 @@ const Registry = [
       }
     },
 
-    { "task": "Morphology Analysis",
+    { "task": "Morphological Analysis",      
       "name": "WebLicht-Morphology-DE",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -1601,7 +1601,7 @@ const Registry = [
       "version": "v1.0",
       "authentication": "no",
       "licence": "public",
-      "description": "WebLicht Easy Chain for Morphology Analysis (German). The pipeline makes use of WebLicht's TCF converter, the IMS tokenizer, and the IMS tool on German morphology. WebLicht's Tundra can be used to visualize the result.",
+      "description": "WebLicht Easy Chain for Morphological Analysis (German). The pipeline makes use of WebLicht's TCF converter, the IMS tokenizer, and the IMS tool on German morphology. WebLicht's Tundra can be used to visualize the result.",
       "languages": ["deu"],
       "langEncoding": "639-1",		  
       "mimetypes": ["text/plain",
@@ -1618,7 +1618,7 @@ const Registry = [
       }
     },
     
-    { "task": "Morphology Analysis",
+    { "task": "Morphological Analysis",
       "name": "WebLicht-Morphology-EN",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -1631,7 +1631,7 @@ const Registry = [
       "version": "v1.0",
       "authentication": "no",		  
       "licence": "public",
-      "description": "WebLicht Easy Chain for Morphology Analysis (English). The pipeline makes use of WebLicht's TCF converter, the Stanford tokenizer, and the morphology analysis service from MorphAdorner. WebLicht's Tundra can be used to visualize the result.",
+      "description": "WebLicht Easy Chain for Morphological Analysis (English). The pipeline makes use of WebLicht's TCF converter, the Stanford tokenizer, and the morphology analysis service from MorphAdorner. WebLicht's Tundra can be used to visualize the result.",
       "languages": ["eng"],
       "langEncoding": "639-1",		  
       "mimetypes": ["text/plain",
@@ -2954,7 +2954,7 @@ const Registry = [
     },
     
     {
-	"task": "Tagger",
+	"task": "Morpho-syntactic tagger",	
 	"name": "Tagger NLTK",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -2988,7 +2988,7 @@ const Registry = [
 	}
     },
     
-    { "task": "Text Analytics",
+    { "task": "Distant Reading",
       "name": "Voyant Tools",
       "logo": "voyant-tools.jpg",		  
       "homepage": "http://voyant-tools.org",
@@ -3019,8 +3019,7 @@ const Registry = [
       }
     },
 
-    // TO BE INTEGRATED (Tomasz)
-    {   "task": "Text Analytics",
+    {   "task": "Stylometry",
 	"name": "WebSty",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
