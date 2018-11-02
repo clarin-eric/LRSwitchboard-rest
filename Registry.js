@@ -3,11 +3,11 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Registry.js
-// Time-stamp: <2018-11-02 09:53:55 (zinn)>
+// Time-stamp: <2018-11-02 09:57:22 (zinn)>
 // -------------------------------------------
 
 const Registry = [
-    { "task": "Chunker",
+    { "task": "task": "Shallow Parsing",
       "name": "Iobber",
       "logo": "clarin-pl.png",
       "homepage": "http://ws.clarin-pl.eu",
@@ -33,7 +33,7 @@ const Registry = [
       }
     },
     
-    { "task": "Constituent Parsing",
+    { "task": "Constituency Parsing",
       "name": "WebLicht-Const-Parsing-DE",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -46,7 +46,7 @@ const Registry = [
       "version": "v1.0",
       "authentication": "no",		  
       "licence": "public",
-      "description": "WebLicht Easy Chain for Constituent Parsing (German). The pipeline makes use of WebLicht's TCF converter, the tokenizer and sentence boundary detector of the IMS/Stuttgart , and the constituent parser from the Berkeley NLP project. WebLicht's Tundra can be used to visualize the result.",
+      "description": "WebLicht Easy Chain for Constituency Parsing (German). The pipeline makes use of WebLicht's TCF converter, the tokenizer and sentence boundary detector of the IMS/Stuttgart , and the constituent parser from the Berkeley NLP project. WebLicht's Tundra can be used to visualize the result.",
       "languages": ["deu"],
       "langEncoding": "639-1",		  
       "mimetypes": ["text/plain",
@@ -64,7 +64,7 @@ const Registry = [
       }
     },
 
-    { "task": "Constituent Parsing",
+    { "task": "Constituency Parsing",
       "name": "WebLicht-Const-Parsing-EN",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -77,7 +77,7 @@ const Registry = [
       "version": "v1.0",
       "authentication": "no",		  
       "licence": "public",
-      "description": "WebLicht Easy Chain for Constituent Parsing (English). The pipeline makes use of WebLicht's TCF converter, the Stanford tokenizer, and the statistical BLLIP/Charniak parser. WebLicht's Tundra can be used to visualize the result.",
+      "description": "WebLicht Easy Chain for Constituency Parsing (English). The pipeline makes use of WebLicht's TCF converter, the Stanford tokenizer, and the statistical BLLIP/Charniak parser. WebLicht's Tundra can be used to visualize the result.",
       "languages": ["eng"],
       "langEncoding": "639-1",		  
       "mimetypes": ["text/plain",
