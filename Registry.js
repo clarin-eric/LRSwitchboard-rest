@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Registry.js
-// Time-stamp: <2018-11-02 10:00:15 (zinn)>
+// Time-stamp: <2018-11-15 14:58:51 (zinn)>
 // -------------------------------------------
 
 const Registry = [
@@ -717,7 +717,8 @@ const Registry = [
 	    "analysis": "termopl"
 	}
     },
-    
+
+   
     {
 	"task": "Inclusion detection",
 	"name": "Inkluz",
@@ -1891,7 +1892,15 @@ const Registry = [
 	"description": "Name Entity Recogniser for English by NLTK.",
 	"languages": ["eng"],
 	"langEncoding": "639-1",
-	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
+	"mimetypes": ["text/plain",
+		      "application/msword",
+		      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+		      "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+		      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+		      "application/vnd.oasis.opendocument.text",
+		      "application/pdf",
+		      // "text/html", // not yet supported
+		      "application/rtf"],
 	"output": ["application/xml"],
 	"url": "http://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
@@ -2977,7 +2986,7 @@ const Registry = [
 		      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
 		      "application/vnd.oasis.opendocument.text",
 		      "application/pdf",
-		      "text/html",
+		      // "text/html", (not yet supported)
 		      "application/rtf"],
 	"output": ["application/xml"],
 	"url": "http://ws.clarin-pl.eu/weblicht.html",
@@ -3033,6 +3042,33 @@ const Registry = [
 	"licence": "public",
 	"authentication": "no",	    	    
 	"description": "Similarity and clustering of texts in Polish. The tools used include: Morfeusz 2 with SGJP dictionary (for morphological analysis), wcrft2 (for tagging), Liner2 (for named entities recognition), Fextor (for extraction of feaures from texts); Cluto (for clustering), result visualisation: D3.js, D3-tip.",
+	"languages": ["pol", "eng", "deu", "rus", "hun", "spa"],
+	"langEncoding": "639-1",
+	"mimetypes": ["application/zip"],
+	"output": ["application/octet-stream"],
+	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"parameters": {
+	    "input": "self.linkToResource",
+	    "lang":  "self.linkToResourceLanguage",
+	    "analysis": "websty",
+	    "batch": "true"
+	}
+    },
+
+    {   "task": "Topic Modelling",
+	"name": "Topic",
+	"logo": "clarin-pl.png",
+	"homepage": "http://ws.clarin-pl.eu",
+	"location": "Wrocław, Poland",
+	"creators": "Clarin-PL",
+	"contact": {
+	    "person": "Tomasz Walkowiak",
+	    "email": "tomasz.walkowiak@pwr.edu.pl"
+	},
+	"version": "1.0",
+	"licence": "public",
+	"authentication": "no",	    	    
+	"description": "Topic modelling of texts in Polish. The tools used include: Morfeusz 2 with SGJP dictionary (for morphological analysis), wcrft2 (for tagging), gensim and mallet (for topic modelling), and D3.js plus D3-tip (for result visualisation).",
 	"languages": ["pol"],
 	"langEncoding": "639-1",
 	"mimetypes": ["application/zip"],
@@ -3041,11 +3077,11 @@ const Registry = [
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
-	    "analysis": "websty",
+	    "analysis": "topic",
 	    "batch": "true"
 	}
     },
-
+    
     {
 	"task": "Text Summarization",
 	"name": "SUMMA Text Summarization - GATE Cloud (web service)",

@@ -6,11 +6,11 @@
 
 2. Change to the source directory of the repo, and make the docker image, e.g., 
 
-   ```docker build -t clauszinn/clrs-rest . ```
+   ```docker build -t clauszinn/switchboard-rest . ```
 
 3. Run the docker container, e.g.,
 
-   ```docker run -p 4511:8080 -d clauszinn/clrs-rest ```
+   ```docker run -p 4511:8080 -d clauszinn/switchboard-rest ```
 
 
 Open, for instance,
