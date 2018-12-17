@@ -3,11 +3,12 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Registry.js
-// Time-stamp: <2018-11-15 14:58:51 (zinn)>
+// Time-stamp: <2018-11-29 21:37:27 (zinn)>
 // -------------------------------------------
 
 const Registry = [
     { "task": "Shallow Parsing",
+      "softwareType": "qualitative",
       "name": "Iobber",
       "logo": "clarin-pl.png",
       "homepage": "http://ws.clarin-pl.eu",
@@ -34,6 +35,7 @@ const Registry = [
     },
     
     { "task": "Constituency Parsing",
+      "softwareType": "qualitative",
       "name": "WebLicht-Const-Parsing-DE",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -55,7 +57,7 @@ const Registry = [
 		    "application/msword",
 		    "application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
       "output": ["application/tcf+xml"],
-// old PATH      "url": "http://tuebingen.weblicht.sfs.uni-tuebingen.de:8080/weblicht/",
+      // old PATH      "url": "http://tuebingen.weblicht.sfs.uni-tuebingen.de:8080/weblicht/",
       "url": "https://weblicht.sfs.uni-tuebingen.de/weblicht-switchboard/",		  
       "parameters": {
 	  "input" :     "self.linkToResource",
@@ -65,6 +67,7 @@ const Registry = [
     },
 
     { "task": "Constituency Parsing",
+      "softwareType": "qualitative",
       "name": "WebLicht-Const-Parsing-EN",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -94,132 +97,8 @@ const Registry = [
       }
     },		
     
-    { "task": "Conversion",
-      "name": "TCF-TEI decoder (web service)",
-      "logo": "YourLogoComesHere.png",
-      "softwareType": "webService",
-      "requestType": "form-data (input key must have file value)",		  
-      "homepage": "http://kaskade.dwds.de/tei-tcf",
-      "location": "DWDS, Germany",		  
-      "creators": "Bryan Jurish",
-      "contact": {
-	  "person": "Bryan Jurish",
-	  "email": "jurish@bbaw.de",
-      },
-      "version": "0.0.4",
-      "licence": "public",               
-      "authentication": "no",
-      "description": "A conversion service from TCF to TEI (this is an experimental service).",
-      "languages": ["generic"], 
-      "langEncoding": "639-1",
-      "mimetypes": ["application/tcf+xml",
-		    "application/xml;format-variant=weblicht-tcf"
-		   ], 		  
-      "output": "application/xml",      
-      "url": "http://kaskade.dwds.de/tei-tcf/decode.perl", 
-      "parameters": {
-	  "input" : "self.linkToResource" 
-      },
-      
-      "mapping":   {
-	  "input" : "f"
-      }
-    },
-
-    { "task": "Conversion",
-      "name": "TEI -> TCF encoder (web service)",
-      "logo": "YourLogoComesHere.png",
-      "softwareType": "webService",
-      "requestType": "form-data (input key must have file value)",		  
-      "homepage": "http://kaskade.dwds.de/tei-tcf",
-      "location": "DWDS, Germany",		  
-      "creators": "Bryan Jurish",
-      "contact": {
-	  "person": "Bryan Jurish",
-	  "email": "jurish@bbaw.de",
-      },
-      "version": "0.0.4",
-      "licence": "public",               
-      "authentication": "no",
-      "description": "A conversion service from TEI to TCF (this is an experimental service).",
-      "languages": ["generic"], 
-      "langEncoding": "639-1",
-      "mimetypes": ["application/tei+xml",
-		    "text/tei+xml;format-variant=tei-dta"
-		   ], 		  
-      "output": "application/xml",
-      "url": "http://kaskade.dwds.de/tei-tcf/encode.perl", 
-      "parameters": {
-	  "input" : "self.linkToResource" 
-      },
-      
-      "mapping":   {
-	  "input" : "f"
-      }
-    },    
-
-    { "task": "Conversion",
-      "name": "OxGarage (web service)",
-      "logo": "YourLogoComesHere.png",
-      "softwareType": "webService",
-      "requestType": "form-data (input key must have file value)",		        
-      "homepage": "http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient",
-      "location": "Oxford, United Kingdom",		  
-      "creators": "see Github repository at https://github.com/sebastianrahtz/oxgarage",
-      "contact": {
-	  "person": "Github page",
-	  "email": "see Github repository at https://github.com/sebastianrahtz/oxgarage",
-      },
-      "version": "2.10.0",
-      "licence": "public",               
-      "authentication": "no",
-      "description": "OxGarage is a web, and RESTful, service to manage the transformation of documents between a variety of formats. The majority of transformations use the Text Encoding Initiative format as a pivot format.",
-      "languages": ["nld", "eng", "deu", "fra", "ita", "spa", "por", "tur", "rus", "swe"], 
-      "langEncoding": "639-1",
-      "mimetypes": ["application/tei+xml",
-		    "text/tei+xml;format-variant=tei-dta"], 		  
-      "output": "text/plain",
-      "url": "http://oxgarage.oucs.ox.ac.uk:8080/ege-webservice/Conversions/TEI%3Atext%3Axml/txt%3Atext%3Aplain/",
-      "parameters": { 
-	  "input"        : "self.linkToResource"
-      },
-      "mapping":   { 
-      }
-    },
-    
-    { "task": "Conversion",
-      "name": "HTML To TEXT Converter (web service)",
-      "softwareType": "webService",
-      "requestType": "get",
-      "logo": "YourLogoComesHere.png",		  
-      "homepage": "http://cst.ku.dk/english/vaerktoejer/",
-      "location": "Copenhagen, Denmark",		  
-      "creators": "Bart Jongejan et al.",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },	  	  
-      "version": "unknown",
-      "authentication": "no",		  
-      "licence": "public",
-      "description": "Converter from text/html to text/plain (this is an experimental service).", 
-      "languages": ["generic"],
-      "langEncoding": "639-1",		  
-      "mimetypes": ["text/html"],
-      "output": "text/plain",
-      "url": "https://cst.dk/html2text",
-      "parameters": {
-	  "input" : "self.linkToResource",
-	  "iLang" : "en",
-	  "base":  ""
-      },
-      "mapping": {
-	  "input"   : "F",
-      },		  
-      
-    },
-    
     { "task": "Dependency Parsing",
+      "softwareType": "qualitative",
       "name": "MaltParser",
       "logo": "clarin-pl.png",
       "homepage": "http://ws.clarin-pl.eu",
@@ -246,6 +125,7 @@ const Registry = [
     },
     
     { "task": "Coreference Resolution",
+      "softwareType": "qualitative",
       "name": "Concraft -> Bartek",
       "logo": "zil.png",		  		  		  
       "homepage": "http://zil.ipipan.waw.pl/Bartek",
@@ -272,6 +152,7 @@ const Registry = [
     },			
 
     { "task": "Dependency Parsing",
+      "softwareType": "qualitative",
       "name": "Concraft -> DependencyParser",
       "logo": "zil.png",		  		  		  
       "homepage": "http://zil.ipipan.waw.pl/DependencyParser",
@@ -298,6 +179,7 @@ const Registry = [
     },
     
     { "task": "Dependency Parsing",
+      "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-DE",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -328,6 +210,7 @@ const Registry = [
     },
     
     { "task": "Dependency Parsing",
+      "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-NL-ALPINO",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -357,8 +240,8 @@ const Registry = [
       }
     },
     
-    
     { "task": "Dependency Parsing",
+      "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-EN",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -389,6 +272,7 @@ const Registry = [
     },
 
     { "task": "Dependency Parsing",
+      "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-SL (RELDI)",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -419,6 +303,7 @@ const Registry = [
     },
     
     { "task": "Dependency Parsing",
+      "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-HR (RELDI)",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -449,6 +334,7 @@ const Registry = [
     },
     
     { "task": "Dependency Parsing",
+      "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-SR (RELDI)",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -479,6 +365,7 @@ const Registry = [
     },
     
     { "task": "Dependency Parsing",
+      "softwareType": "qualitative",
       "name": "Alpino",
       "logo": "alpino.jpg",		  
       "homepage": "http://www.let.rug.nl/vannoord/alp/Alpino/",
@@ -508,6 +395,7 @@ const Registry = [
     },
 
     { "task": "Dependency Parsing",
+      "softwareType": "qualitative",
       "name": "UDPipe",
       "logo": "lindat.jpg",
       "homepage": "http://ufal.mff.cuni.cz/udpipe",
@@ -536,163 +424,9 @@ const Registry = [
       },
     },
 
-    { "task": "Dependency Parsing",
-      "name": "UDPipe (web service)",
-      "softwareType": "webService",
-      "requestType": "form-data (input key must have file contents)",
-      "logo": "lindat.jpg",
-      "homepage": "http://ufal.mff.cuni.cz/udpipe",
-      "location": "Charles University, Prague, Czech Republic",      
-      "creators": "Milan Straka, Jana Straková",
-      "contact": {
-	  "person": "Milan Straka",
-	  "email": "straka@ufal.mff.cuni.cz",
-      },
-      "version": "unknown",
-      "authentication": "no",		  
-      "licence": "UDPipe is a free software under Mozilla Public Licence 2.0 and the linguistic models are free for non-commercial use and distributed under CC BY-NC-SA licence, although for some models the original data used to create the model may impose additional licensing conditions. UDPipe is versioned using Semantic Versioning.", 
-      "description":  "UDPipe is an trainable pipeline for tokenization, tagging, lemmatization and dependency parsing of CoNLL-U files. UDPipe is language-agnostic and can be trained given only annotated data in CoNLL-U format. Trained models are provided for nearly all UD treebanks.",
-      "langEncoding": "639-1",
-      "languages": ["grc", "ara", "bel", "bul", "cat", "cop", "hrv", "ces", "dan", "nld", "eng", "eus", "est", "fin", "fra", "glg", "deu", "got", "ell", "heb", "hin", "hun", "ind", "gle", "ita", "jpn", "kaz", "kor", "lat", "lav", "lit", "nor", "nno", "nob", "chu", "fas", "pol", "por", "ron", "rus", "san", "slk", "slv", "spa", "swe", "tam", "tur", "ukr", "urd", "uig", "vie", "zho"],
-      "mimetypes": ["text/plain"],
-      "output": "application/json",		      
-      "url": "https://lindat.mff.cuni.cz/services/udpipe/api/process?tokenizer&tagger&parser",
-      "parameters": {
-	  "input"   : "self.linkToResource", 
-	  "lang"    : "self.linkToResourceLanguage"
-      },		  
-      "mapping": {
-	  "input"   : "data",
-	  "lang"    : "model"
-      },
-    },
-
-    {
-	"task": "Named Entity Recognition",
-	"name": "Annie - GATE Cloud (web service)",
-	"softwareType": "webService",
-	"requestType": "post",
-	"logo": "gateCloud.png",		  
-	"homepage": "https://cloud.gate.ac.uk/shopfront/sampleServices",
-	"location": "Sheffield, UK",
-	"creators": "GATE developers",
-	"contact": {
-	    "person": "The GATE Cloud developers",
-	    "email": "Plase fill out the web form at https://cloud.gate.ac.uk/contact/email",
-	},
-	"version": "unknown",
-	"authentication": "no",		  
-	"licence": "Please go to the GATE Cloud web page", 
-	"description":  "A named entity recognition pipeline that identifies basic entity types, such as Person, Location, nd Organization expressions. It works on documents in the German language. This is the Annie NER engine from the GATE Cloud. THIS IS AN EXPERIMENTAL INTEGRATION. Note that the service is also available at https://cloud.gate.ac.uk/shopfront/sampleServices, offering a nice visualization of the JSON.",
-	"langEncoding": "639-1",
-	"languages": ["deu"],
-	"mimetypes": ["text/plain"],
-	"output": "application/json",		
-	"url": "https://cloud-api.gate.ac.uk/process-document/german-named-entity-recognizer",
-	"parameters": {
-	    "input"   : "self.linkToResource"
-	},		  
-	"mapping": {
-	    "input"   : "data"
-	},
-    },
-
-{
-	"task": "Named Entity Recognition",
-	"name": "NER from GATE Cloud (web service)",
-	"softwareType": "webService",
-	"requestType": "post",
-	"logo": "gateCloud.png",		  
-	"homepage": "https://cloud.gate.ac.uk/shopfront/sampleServices",
-	"location": "Sheffield, UK",
-	"creators": "GATE developers",
-	"contact": {
-	    "person": "The GATE Cloud developers",
-	    "email": "Plase fill out the web form at https://cloud.gate.ac.uk/contact/email",
-	},
-	"version": "unknown",
-	"authentication": "no",		  
-	"licence": "Please go to the GATE Cloud web page", 
-	"description":  "A named entity recognition pipeline that identifies basic entity types, such as Person, Location, and Organization expressions. It works on documents in the French language. This is a web service from the GATE Cloud. THIS IS AN EXPERIMENTAL INTEGRATION. Note that the service is also available at https://cloud.gate.ac.uk/shopfront/sampleServices, offering a nice visualization of the JSON.",
-	"langEncoding": "639-1",
-	"languages": ["fra"],
-	"mimetypes": ["text/plain"],
-	"output": "application/json",	
-	"url": "https://cloud-api.gate.ac.uk/process-document/french-named-entity-recognizer",
-	"parameters": {
-	    "input"   : "self.linkToResource"
-	},		  
-	"mapping": {
-	    "input"   : "data"
-	},
-    },
-        
-    {
-	"task": "Named Entity Recognition",
-	"name": "Annie - GATE Cloud (web service)",
-	"softwareType": "webService",
-	"requestType": "post",
-	"logo": "gateCloud.png",		  
-	"homepage": "https://cloud.gate.ac.uk/shopfront/sampleServices",
-	"location": "Sheffield, UK",
-	"creators": "GATE developers",
-	"contact": {
-	    "person": "The GATE Cloud developers",
-	    "email": "Plase fill out the web form at https://cloud.gate.ac.uk/contact/email",
-	},
-	"version": "unknown",
-	"authentication": "no",		  
-	"licence": "Please go to the GATE Cloud web page", 
-	"description":  "This is the Annie NER engine from the GATE Cloud. THIS IS AN EXPERIMENTAL INTEGRATION. Note that the service is also available at https://cloud.gate.ac.uk/shopfront/sampleServices, offering a nice visualization of the JSON.",
-	"langEncoding": "639-1",
-	"languages": ["eng"],
-	"mimetypes": ["text/plain"],
-	"output": "application/json",	
-	"url": "https://cloud-api.gate.ac.uk/process-document/annie-named-entity-recognizer?annotations=:Person&annotations=:Location&annotations=:Organization&annotations=:Date&annotations=:Money",
-	"parameters": {
-	    "input"   : "self.linkToResource"
-	},		  
-	"mapping": {
-	    "input"   : "data"
-	},
-    },
-
-    {
-	"task": "Named Entity Recognition",
-	"name": "OpenNLP English Pipeline - GATE Cloud (web service)",
-	"softwareType": "webService",
-	"requestType": "post",
-	"logo": "gateCloud.png",		  
-	"homepage": "https://cloud.gate.ac.uk/shopfront/sampleServices",
-	"location": "Sheffield, UK",
-	"creators": "GATE developers",
-	"contact": {
-	    "person": "The GATE Cloud developers",
-	    "email": "Plase fill out the web form at https://cloud.gate.ac.uk/contact/email",
-	},
-	"version": "unknown",
-	"authentication": "no",		  
-	"licence": "Please go to the GATE Cloud web page", 
-	"description":  "The English tokeniser, sentence splitter, POS tagger, phrase chunker and named-entity recogniser from Apache OpenNLP. The components are based on the maxent machine learning algorithm, and produce Token and Sentence annotations in a form compatible with other standard GATE tools. THIS IS AN EXPERIMENTAL INTEGRATION. Note that the service is also available at https://cloud.gate.ac.uk/shopfront/sampleServices, offering a nice visualization of the JSON.",
-	"langEncoding": "639-1",
-	"languages": ["eng"],
-	"mimetypes": ["text/plain"],
-	"output": "application/json",	
-	"url": "https://cloud-api.gate.ac.uk/process-document/opennlp-english-pipeline",
-	"parameters": {
-	    "input"   : "self.linkToResource"
-	},		  
-	"mapping": {
-	    "input"   : "data"
-	},
-    },
-    
-    // curl -F 'model=german' -F 'data=@germanText.txt' 'http://lindat.mff.cuni.cz/services/udpipe/api/process?tokenizer&tagger&parser'
-
-    //		grc, ara, eus, bul, hrv, ces, dan, nld, eng, est, fin, fra, deu, got, ell, heb, hin, hun, ind, gle, ita, jpn, lat, nor, chu, fas, pol, por, ron, slv, spa, swe, tam, cat, zho, glg, kaz, lav, rus, tur, cop, san, slk, ukr, uig, vie, bel, kor, lit, urd
-
     {
 	"task": "Extraction of Polish terminology",
+	"softwareType": "quantitative",
 	"name": "TermoPL",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -717,10 +451,10 @@ const Registry = [
 	    "analysis": "termopl"
 	}
     },
-
    
     {
 	"task": "Inclusion detection",
+	"softwareType": "quantitative",
 	"name": "Inkluz",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -748,6 +482,7 @@ const Registry = [
 
     {
 	"task": "Keyword Extractor",
+	"softwareType": "quantitative",
 	"name": "ReSpa",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -773,220 +508,8 @@ const Registry = [
 	}
     },
 
-    { "task": "Keyword Extractor",
-      "name": "KER (web service)",
-      "softwareType": "webService",
-      "requestType": "form-data (input key must have file contents)",
-      "logo": "lindat.jpg",
-      "homepage": "http://lindat.mff.cuni.cz/services/ker/",
-      "location": "Charles University, Prague, Czech Republic",            
-      "creators": "Jindřich Libovický",
-      "contact": {
-	  "person": "Jindřich Libovický",
-	  "email": "libovicky@ufal.mff.cuni.cz",
-      },
-      "version": "unknown",
-      "authentication": "no",		  
-      "licence": "unknown", 
-      "description":  "KER is a keyword extractor that was designed for scanned texts in Czech and English. It is based on the stadard tf-idf algorithm with the idf tables trained on texts from Wikipedia. To deal with the data sparsity, texts are preprocessed by Morphodita: morphological dictionary and tagger.",
-      "langEncoding": "639-1",
-      "languages": ["ces", "eng"],
-      "mimetypes": ["text/plain"],
-      "output": "application/json",      
-      "url": "http://lindat.mff.cuni.cz/services/ker", 
-      "parameters": {
-	  "input"        : "self.linkToResource", 
-	  "lang"         : "self.linkToResourceLanguage",
-	  "threshold"    : "0.2",
-	  "maximum-words": "15"
-      },
-      "mapping":   {
-	  "input"         : "data",
-	  "lang"          : "language"
-      }		  
-    },
-    
-    { "task": "Lemmatization",	
-      "name": "CLARIN-DK Tool Chain for Lemmatization (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Performs lemmatization in running text. The web service returns a zip file containing original input and the results of all analyses.",	  
-      "languages": ["dan"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "da-lemmas-notags"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "Lemmatization",	
-      "name": "CLARIN-DK Tool Chain for Lemmatization (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Performs lemmatization in running text. The web service returns a zip file containing original input and the results of all analyses.",	  
-      "languages": ["eng"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "en-lemmas-notags"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "Lemmatization",	
-      "name": "CLARIN-DK Tool Chain for Lemmatization, including POS tags (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Performs lemmatization in running text, including POS tags. The web service returns a zip file containing original input and the results of all analyses.",	  
-      "languages": ["dan"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "da-lemmas-wtags"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "Lemmatization",	
-      "name": "CLARIN-DK Tool Chain for Lemmatization, including POS tags (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  	  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Performs lemmatization in running text, including POS tags. The web service returns a zip file containing original input and the results of all analyses.",	  
-      "languages": ["eng"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow ": "en-lemmas-wtags"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "Lemmatization",	
-      "name": "CLARIN-DK Tool Chain for Lemmatization, presented as freqency list (web service).",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  	  	  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",               
-      "authentication": "no",
-      "description": "Performs lemmatization in running text, presented as freqency list. The web service returns a zip file containing original input and the results of all analyses.",	  
-      "languages": ["dan"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "da-frek-lemmas"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
     { "task": "Lemmatization",
+      "softwareType": "qualitative",
       "name": "WebLicht-Lemmas-DE",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -1017,6 +540,7 @@ const Registry = [
     },
 
     { "task": "Lemmatization",
+      "softwareType": "qualitative",
       "name": "WebLicht-Lemmas-EN",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -1048,6 +572,7 @@ const Registry = [
 
     {
 	"task": "Lemmatization",	
+	"softwareType": "qualitative",
 	"name": "CSTLemma (hosted by D4Science)",
 	"logo": "d4science.png",		  	    
 	"homepage": "https://www.d4science.org",
@@ -1072,44 +597,10 @@ const Registry = [
 	}
     },
     
-    { "task": "Lemmatization",	
-      "name": "CLARIN-DK Tool Chain for Lemmatization, presented as freqency list (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  	  	  	  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Performs lemmatization in running text, presented as freqency list. The web service returns a zip file containing original input and the results of all analyses.",	  
-      "languages": ["eng"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "en-frek-lemmas"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
     
     {
 	"task": "Morphological Analysis",
+	"softwareType": "qualitative",
 	"name": "Morfeusz 2",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -1137,6 +628,7 @@ const Registry = [
 
     {
 	"task": "Morpho-syntactic tagger",
+	"softwareType": "qualitative",
 	"name": "WCRFT2",
 	"logo": "clarin-pl.png",
 	"homepage": "http://nlp.pwr.wroc.pl/redmine/projects/wcrft/wiki/",
@@ -1164,6 +656,7 @@ const Registry = [
 
     {
 	"task": "Named Entity Recognition",
+	"softwareType": "qualitative",
 	"name": "WebLicht-NamedEntities-SL",
 	"logo": "weblicht.jpg",		  	    
 	"homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -1195,6 +688,7 @@ const Registry = [
 
     {
 	"task": "Named Entity Recognition",
+	"softwareType": "qualitative",
 	"name": "D4Science NER (GATE's Annie)",
 	"logo": "d4science.png",		  	    
 	"homepage": "https://www.d4science.org",
@@ -1221,6 +715,7 @@ const Registry = [
 
     {
 	"task": "Named Entity Recognition",
+	"softwareType": "qualitative",
 	"name": "NLP-HUB (multiple NER tools)",
 	"logo": "d4science.png",		  	    
 	"homepage": "https://www.d4science.org",
@@ -1247,6 +742,7 @@ const Registry = [
     
     {
 	"task": "Named Entity Recognition",
+	"softwareType": "qualitative",
 	"name": "Liner2 (hosted by D4Science)",
 	"logo": "d4science.png",		  	    
 	"homepage": "https://www.d4science.org",
@@ -1273,6 +769,7 @@ const Registry = [
 
     {
 	"task": "Dependency Parsing",
+	"softwareType": "qualitative",
 	"name": "Spacy (hosted by D4Science)",
 	"lifecycle": "beta",
 	"logo": "d4science.png",		  	    
@@ -1300,6 +797,7 @@ const Registry = [
 
     {
 	"task": "Dependency Parsing",
+	"softwareType": "qualitative",
 	"name": "Spacy (hosted by D4Science)",
 	"lifecycle": "beta",
 	"logo": "d4science.png",		  	    
@@ -1327,6 +825,7 @@ const Registry = [
    
     {
 	"task": "Named Entity Recognition",
+	"softwareType": "qualitative",
 	"name": "Liner2",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -1353,6 +852,7 @@ const Registry = [
     },
 
     { "task": "Machine Translation",
+      "softwareType": "qualitative",
       "name": "Oersetter (NLD-FRY)",
       "logo": "oersetter.jpg",		  
       "homepage": "http://oersetter.nl/",
@@ -1381,6 +881,7 @@ const Registry = [
     },
 
     { "task": "Machine Translation",
+      "softwareType": "qualitative",
       "name": "Oersetter (FRY-NLD)",
       "logo": "oersetter.jpg",		  
       "homepage": "http://oersetter.nl/",
@@ -1408,188 +909,8 @@ const Registry = [
       }
     },		
     
-    
-    // curl -d @germanet.dc.xml -o output.marc.xml https://weblicht.sfs.uni-tuebingen.de/converter/DC2Marc/rest
-
-    // { "task": "Metadata Format Conversion",
-    //   "name": "NaLiDa2Marc21 (web service)",
-    //   "softwareType": "webService",
-    //   "requestType": "data",
-    //   "logo": "YourLogoComesHere.png",		  
-    //   "homepage": "http://shannon.sfs.uni-tuebingen.de/NaLiDa2Marc21",
-    //   "location": "Tuebingen, Germany",		  		  
-    //   "creators": "CLARIN-D Centre at the University of Tuebingen, Germany",
-    //   "contact": {
-    //       "person": "NaLiDa Support",
-    //       "email": "nalida@sfs.uni-tuebingen.de"
-    //   },	    
-    //   "version": "v1.0",
-    //   "authentication": "no",		  
-    //   "licence": "public",
-    //   "description": "Webservice converting NaLiDa-based CMDI profiles to Marc21",
-    //   "languages": ["generic"], 
-    //   "mimetypes": ["application/xml"],
-    //   "output": ["application/xml"],
-    //   "url": "http://shannon.sfs.uni-tuebingen.de:8080/NaLiDa2Marc-1.0",
-    //   "parameters": { input : "self.linkToResource" // for demo upload site, to be instantiated
-    // 	     }
-    
-    //   // URL to get called:
-    //   // http://tuebingen.weblicht.sfs.uni-tuebingen.de:8080/weblicht?input=http://hdl.handle.net/10932/00-017B-E3BC-2D57-CC01-6&lang=de&analysis=ne
-    // },		
-    
-    { "task": "Metadata Format Conversion",
-      "name": "CMDI2DC (web service)",
-      "softwareType": "webService",
-      "requestType": "data",
-      "logo": "YourLogoComesHere.png",		  
-      "homepage": "https://weblicht.sfs.uni-tuebingen.de/converter/Cmdi2DC",
-      "location": "Tuebingen, Germany",		  		  
-      "creators": "CLARIN-D Centre at the University of Tuebingen, Germany",
-      "contact": {
-	  "person": "NaLiDa Support",
-	  "email": "nalida@sfs.uni-tuebingen.de"
-      },	    
-      "version": "v0.9",
-      "authentication": "no",		  
-      "licence": "public",
-      "description": "Webservice converting CMDI metadata to XML-based Dublin Core metadata.",
-      "languages": ["generic"], 
-      "mimetypes": ["application/xml", "application/octet-stream"],
-      "output": ["application/xml"],
-      "url": "https://weblicht.sfs.uni-tuebingen.de/converter/Cmdi2DC/rest",
-      "parameters": {
-	  "input" : "self.linkToResource" // for demo upload site, to be instantiated
-      }
-    },
-
-    
-    { "task": "Metadata Format Conversion",
-      "name": "DC2MARC21 (web service)",
-      "softwareType": "webService",
-      "requestType": "data",
-      "logo": "YourLogoComesHere.png",		  
-      "homepage": "https://weblicht.sfs.uni-tuebingen.de/converter/DC2Marc",
-      "location": "Tuebingen, Germany",		  		  
-      "creators": "CLARIN-D Centre at the University of Tuebingen, Germany",
-      "contact": {
-	  "person": "NaLiDa Support",
-	  "email": "nalida@sfs.uni-tuebingen.de"
-      },	    
-      "version": "v1.0",
-      "authentication": "no",		  
-      "licence": "public",
-      "description": "Webservice converting XML-based Dublin Core metadata to XML-based MARC 21 metadata.",
-      "languages": ["generic"], 
-      "mimetypes": ["application/xml", "application/octet-stream"],
-      "output": ["application/xml"],
-      "url": "https://weblicht.sfs.uni-tuebingen.de/converter/DC2Marc/rest",
-      "parameters": {
-	  "input" : "self.linkToResource" // for demo upload site, to be instantiated
-      }
-    },
-    
-    { "task": "Metadata Format Conversion",
-      "name": "MARC2EAD (web service)",
-      "softwareType": "webService",
-      "requestType": "data",
-      "logo": "YourLogoComesHere.png",		  
-      "homepage": "https://weblicht.sfs.uni-tuebingen.de/converter/Marc2EAD",
-      "location": "Tuebingen, Germany",		  		  
-      "creators": "CLARIN-D Centre at the University of Tuebingen, Germany",
-      "contact": {
-	  "person": "NaLiDa Support",
-	  "email": "nalida@sfs.uni-tuebingen.de"
-      },	    
-      "version": "v1.0",
-      "authentication": "no",		  
-      "licence": "public",
-      "description": "Webservice converting XML-based MARC 21 metadata to XML-based EAD metadata.",
-      "languages": ["generic"], 
-      "mimetypes": ["application/xml", "application/octet-stream"],
-      "output": ["application/xml"],
-      "url": "https://weblicht.sfs.uni-tuebingen.de/converter/Marc2EAD/rest",
-      "parameters": {
-	  "input" : "self.linkToResource" // for demo upload site, to be instantiated
-      }
-    },
-
-    { "task": "Metadata Format Conversion",
-      "name": "Marc2MODS (web service)",
-      "softwareType": "webService",
-      "requestType": "data",
-      "logo": "YourLogoComesHere.png",		  
-      "homepage": "https://weblicht.sfs.uni-tuebingen.de/converter/Marc2MODS",
-      "location": "Tuebingen, Germany",		  		  
-      "creators": "CLARIN-D Centre at the University of Tuebingen, Germany",
-      "contact": {
-	  "person": "NaLiDa Support",
-	  "email": "nalida@sfs.uni-tuebingen.de"
-      },	    
-      "version": "v1.0",
-      "authentication": "no",		  
-      "licence": "public",
-      "description": "Webservice converting XML-based MARC 21 metadata to XML-based MODS metadata.",
-      "languages": ["generic"], 
-      "mimetypes": ["application/xml", "application/octet-stream"],
-      "output": ["application/xml"],
-      "url": "https://weblicht.sfs.uni-tuebingen.de/converter/Marc2MODS/rest",
-      "parameters": {
-	  "input" : "self.linkToResource" // for demo upload site, to be instantiated
-      }
-    },
-    
-    { "task": "Metadata Format Conversion",
-      "name": "Marc2RDFDC (web service)",
-      "softwareType": "webService",
-      "requestType": "data",
-      "logo": "YourLogoComesHere.png",		  
-      "homepage": "https://weblicht.sfs.uni-tuebingen.de/converter/Marc2RDFDC",
-      "location": "Tuebingen, Germany",		  		  
-      "creators": "CLARIN-D Centre at the University of Tuebingen, Germany",
-      "contact": {
-	  "person": "NaLiDa Support",
-	  "email": "nalida@sfs.uni-tuebingen.de"
-      },	    
-      "version": "v1.0",
-      "authentication": "no",		  
-      "licence": "public",
-      "description": "Webservice converting XML-based MARC 21 metadata to XML-based RDF-DC metadata.",
-      "languages": ["generic"], 
-      "mimetypes": ["application/xml", "application/octet-stream"],
-      "output": ["application/xml"],
-      "url": "https://weblicht.sfs.uni-tuebingen.de/converter/Marc2RDFDC/rest",
-      "parameters": {
-	  "input" : "self.linkToResource" // for demo upload site, to be instantiated
-      }
-    },				
-
-    { "task": "Metadata Format Conversion",
-      "name": "MODS2RDF (web service)",
-      "softwareType": "webService",
-      "requestType": "data",
-      "logo": "YourLogoComesHere.png",		  
-      "homepage": "https://weblicht.sfs.uni-tuebingen.de/converter/MODS2RDF",
-      "location": "Tuebingen, Germany",		  		  
-      "creators": "CLARIN-D Centre at the University of Tuebingen, Germany",
-      "contact": {
-	  "person": "NaLiDa Support",
-	  "email": "nalida@sfs.uni-tuebingen.de"
-      },	    
-      "version": "v1.0",
-      "authentication": "no",		  
-      "licence": "public",
-      "description": "Webservice converting XML-based MODS metadata to XML-based RDF metadata.",
-      "languages": ["generic"], 
-      "mimetypes": ["application/xml", "application/octet-stream"],
-      "output": ["application/xml"],
-      "url": "https://weblicht.sfs.uni-tuebingen.de/converter/MODSRDF/rest",
-      "parameters": {
-	  "input" : "self.linkToResource" // for demo upload site, to be instantiated
-      }
-    },
-
     { "task": "Morphological Analysis",      
+      "softwareType": "qualitative",
       "name": "WebLicht-Morphology-DE",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -1620,6 +941,7 @@ const Registry = [
     },
     
     { "task": "Morphological Analysis",
+      "softwareType": "qualitative",
       "name": "WebLicht-Morphology-EN",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -1649,115 +971,8 @@ const Registry = [
       }
     },
 
-    { "task": "Named Entity Recognition",	
-      "name": "CLARIN-DK Tool Chain for NER (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  	  	  	  	  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Performs Named Entity Recognition. The web service returns a zip file containing original input and the results of all analyses.",	  
-      "languages": ["dan"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "da-navne"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "Named Entity Recognition",	
-      "name": "CLARIN-DK Tool Chain for NER including segmentation (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  	  	  	  	  	  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Performs Named Entity Recognition, including segmentation. The web service returns a zip file containing original input and the results of all analyses.",	  
-      "languages": ["dan"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "da-navne-segments"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "Named Entity Recognition",	
-      "name": "CLARIN-DK Tool Chain for NER including POS tags (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  	  	  	  	  	  	  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Performs Named Entity Recognition, including POS tags. The web service returns a zip file containing original input and the results of all analyses.",	  
-      "languages": ["dan"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "da-navne-POS"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
     { "task": "Named Entity Recognition",
+      "softwareType": "qualitative",
       "name": "Concraft -> Nerf",
       "logo": "zil.png",		  		  		  
       "homepage": "http://zil.ipipan.waw.pl/Nerf",
@@ -1784,6 +999,7 @@ const Registry = [
       }
     },
     { "task": "Named Entity Recognition",
+      "softwareType": "qualitative",
       "name": "WebLicht-NamedEntities-DE",
       "logo": "weblicht.jpg",		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -1815,6 +1031,7 @@ const Registry = [
     },
 
     { "task": "Named Entity Recognition",
+      "softwareType": "qualitative",
       "name": "WebLicht-NamedEntities-EN",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -1843,40 +1060,10 @@ const Registry = [
 	  "analysis": "ne"                    
       }
     },				
-
-    { "task": "Named Entity Recognition",
-      "name": "NameTag (web service)",
-      "softwareType": "webService",
-      "requestType": "form-data (input key must have file contents)",
-      "logo": "lindat.jpg",
-      "homepage": "http://lindat.mff.cuni.cz/services/nametag/",
-      "location": "Charles University, Prague, Czech Republic",            
-      "creators": "Milan Straka, Jana Straková",
-      "contact": {
-	  "person": "Milan Straka",
-	  "email": "straka@ufal.mff.cuni.cz",
-      },
-      "version": "unknown",
-      "authentication": "no",		  
-      "licence": "NameTag is a free software under LGPL licence and the linguistic models are free for non-commercial use and distributed under CC BY-NC-SA licence, although for some models the original data used to create the model may impose additional licensing conditions.", 
-      "description":  "NameTag is an open-source tool for named entity recognition (NER). NameTag identifies proper names in text and classifies them into predefined categories, such as names of persons, locations, organizations, etc. NameTag is distributed as a standalone tool or a library, along with trained linguistic models. In the Czech language, NameTag achieves state-of-the-art performance (Straková et al. 2013).",
-      "langEncoding": "639-1",
-      "languages": ["ces", "eng"],
-      "mimetypes": ["text/plain"],
-      "output": "application/json",		            
-      "url": "http://lindat.mff.cuni.cz/services/nametag/api/recognize",
-      "parameters": {
-	  "input"   : "self.linkToResource", 
-	  "lang"    : "self.linkToResourceLanguage"
-      },		  
-      "mapping": {
-	  "input"   : "data",
-	  "lang"    : "language"
-      },
-    },
     
     {
 	"task": "Named Entity Recognition",
+	"softwareType": "qualitative",
 	"name": "NER NLTK",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -1909,9 +1096,10 @@ const Registry = [
 	    "analysis": "nerNLTK"
 	}
     },
-
     
-    { "task": "N-Gramming",
+    {
+	"task": "N-Gramming",
+      "softwareType": "quantitative",
       "name": "FoLiA-stats",
       "logo": "foliastats.jpg",		  		  
       "homepage": "https://github.com/LanguageMachines/foliautils",
@@ -1938,188 +1126,9 @@ const Registry = [
 	  "input"        : "foliainput_url"
       }
     },		
-    
-    { "task": "N-Gramming",
-      "name": "CLARIN-DK Tool Chain: Computes alphabetic list of words and their frequencies (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  	  	  	  	  	  	  	  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Alphabetic list of words with frequencies (uses a lemmatiser, but does not output the lemmas). The web service returns a zip file containing original input and the results of all analyses.",
-      "languages": ["eng"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "en-frek-ord"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
 
     { "task": "N-Gramming",
-      "name": "CLARIN-DK Tool Chain: Computes bigrams, lemmas, sorted by frequency (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  	  	  	  	  	  	  	  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Computes bigrams, lemmas, sorted by frequency. The web service returns a zip file containing original input and the results of all analyses.",
-      "languages": ["dan"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "da-frek-bigram-lemmas"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "N-Gramming",
-      "name": "CLARIN-DK Tool Chain: Computes bigrams, lemmas, sorted by frequency (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Computes bigrams, lemmas, sorted by frequency. The web service returns a zip file containing original input and the results of all analyses.",
-      "languages": ["eng"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "en-frek-bigram-lemmas"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "N-Gramming",
-      "name": "CLARIN-DK Tool Chain: Computes bigrams, words, sorted by frequency (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Computes bigrams, words, sorted by frequency. The web service returns a zip file containing original input and the results of all analyses.",	  
-      "languages": ["dan"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "da-frek-bigram-ord"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "N-Gramming",
-      "name": "CLARIN-DK Tool Chain: Computes bigrams, words, sorted by frequency (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Computes bigrams, words, sorted by frequency. The web service returns a zip file containing original input and the results of all analyses.",	  
-      "languages": ["eng"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "en-frek-bigram-ord"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "N-Gramming",
+      "softwareType": "quantitative",
       "name": "Colibri Core (plain text)",
       "logo": "colibriCore.jpg",		  		  
       "homepage": "https://github.com/proycon/colibri-core",
@@ -2153,6 +1162,7 @@ const Registry = [
     },
 
     { "task": "N-Gramming",
+      "softwareType": "quantitative",
       "name": "Colibri Core (folia+xml)",
       "logo": "colibriCore.jpg",		  
       "homepage": "https://github.com/proycon/colibri-core",
@@ -2186,6 +1196,7 @@ const Registry = [
     },				
     
     { "task": "NLP suite for Dutch",
+      "softwareType": "qualitative",
       "name": "Frog (plain text)",
       "logo": "frog.jpg",		  
       "homepage": "https://languagemachines.github.io/frog/",
@@ -2214,6 +1225,7 @@ const Registry = [
     },		
 
     { "task": "NLP suite for Dutch",
+      "softwareType": "qualitative",
       "name": "Frog (folia+xml)",
       "logo": "frog.jpg",		  
       "homepage": "https://languagemachines.github.io/frog/",
@@ -2242,6 +1254,7 @@ const Registry = [
     },
     
     { "task": "Part-Of-Speech Tagging",
+      "softwareType": "qualitative",
       "name": "WebLicht-POSTags-Lemmas-DE",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -2272,6 +1285,7 @@ const Registry = [
     },
 
     { "task": "Part-Of-Speech Tagging",
+      "softwareType": "qualitative",
       "name": "WebLicht-POSTags-Lemmas-FR",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -2302,6 +1316,7 @@ const Registry = [
     },		
 
     { "task": "Part-Of-Speech Tagging",
+      "softwareType": "qualitative",
       "name": "WebLicht-POSTags-Lemmas-IT",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -2332,6 +1347,7 @@ const Registry = [
     },				
 
     { "task": "Part-Of-Speech Tagging",
+      "softwareType": "qualitative",
       "name": "WebLicht-POSTags-Lemmas-EN",
       "logo": "weblicht.jpg",		  		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -2362,6 +1378,7 @@ const Registry = [
     },
     
     { "task": "Part-Of-Speech Tagging",
+      "softwareType": "qualitative",
       "name": "Concraft",
       "logo": "zil.png",		  		  		  
       "homepage": "http://zil.ipipan.waw.pl/Concraft",
@@ -2387,84 +1404,9 @@ const Registry = [
       }
     },		
     
-
-    { "task": "Phonetic Transcription",
-      "name": "runASR (web service)",
-      "logo": "YourLogoComesHere.png",		  		  
-      "softwareType": "webService",
-      "requestType": "form-data (input key must have file value)",      
-      "homepage": "http://www.phonetik.uni-muenchen.de/forschung/Bas/BasWebserviceseng.html",
-      "location": "BAS, Muenchen",
-      "creators": "Florian Schiel, Andreas Kipp, Thomas Kisler (BAS)",
-      "contact": {
-	  "person": "Florian Schiel, Andreas Kipp, Thomas Kisler (BAS)",
-	  "email": "schiel@phonetik.uni-muenchen.de",
-      },
-      "version": "x.y.z",
-      "licence": "public",
-      "authentication": "no",		  
-      "description":  "Automatic transcription of speech signal using ASR techniques (experimental).",
-      "langEncoding": "639-3",
-      "languages": ["ara", "deu", "eng", "spa", "per", "fra", "ita", "nld", "pol", "ron", "rus", "cmn"],
-      "mimetypes": ["audio/vnd.wave", "audio/x-nist", "audio/x-wav", "video/mp4", "video/mpeg"],
-      "url": "https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runASR",
-      "output": "application/xml",
-      "parameters": {
-	  "input"       : "self.linkToResource",
-	  "ASRType"     : "callHavenOnDemandASR", 
-	  "OUTFORMAT"   : "json", //bpf, xml, emuDB, json, csv]
-	  "diarization" : "false",
-	  "lang"        : "self.linkToResourceLanguage"	  
-      },
-
-      "mapping":   {
-	  "input"        : "SIGNAL",
-	  "lang"         : "LANGUAGE"
-      }		  
-    },
-
-    { "task": "Phonetic Transcription",
-      "name": "runMINNI (web service)",
-      "logo": "YourLogoComesHere.png",		  		  
-      "softwareType": "webService",
-      "requestType": "form-data (input key must have file value)",
-      "homepage": "http://www.phonetik.uni-muenchen.de/forschung/Bas/BasWebserviceseng.html",
-      "location": "BAS, Muenchen",
-      "creators": "Florian Schiel, Andreas Kipp, Thomas Kisler (BAS)",
-      "contact": {
-	  "person": "Florian Schiel, Andreas Kipp, Thomas Kisler (BAS)",
-	  "email": "schiel@phonetik.uni-muenchen.de",
-      },
-      "version": "x.y.z",
-      "licence": "public",
-      "authentication": "no",
-      "description":  "Segments and labels a speech audio file into SAM-PA (or IPA) phonetic segments without any text/phonological input; results are stored either in praat compatible TextGrid file (configuration parameter OUTFORMAT=TextGrid) or a CSV table (the BPF MAU tier, configuration parameter OUTFORMAT=csv).",	  
-      "langEncoding": "639-3",
-      "languages": ["deu", "aus", "cat", "eng", "ekk", "fra", "hun","ita", "pol", "nld", "rus", "spa"],
-      "mimetypes": ["audio/wav", "audio/vnd.wave", "audio/x-wav"],
-      "url": "https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMINNI",
-      "output": "application/xml",      
-      "parameters": {
-	  "input"      : "self.linkToResource", 
-	  "OUTIPA"     : "false", 
-	  "OUTFORMAT"  : "emuDB", // csv, mau, TextGrid, bpf, par, mau-append, emuDB
-	  "lang"       : "self.linkToResourceLanguage",
-	  "WEIGHT"     : "default",
-	  "MAUSSHIFT"  : "default", 
-	  "OUTSYMBOL"  : "sampa", 
-	  "MINPAUSLEN" : "5",
-	  "USETRN"     : "force",
-	  "INSPROB"    : "0.0"
-      },
-
-      "mapping":   {
-	  "input" : "SIGNAL",
-	  "lang"  : "LANGUAGE"
-      }		  
-    },		
-
     {
 	"task": "Relation between name entities detection",
+	"softwareType": "qualitative",
 	"name": "Serel",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -2489,226 +1431,9 @@ const Registry = [
 	    "analysis": "serel"
 	}
     },
-    
-    // the tools for CLARIN-DK have little parametrization, everything's hardcoded in the workflow parameter
-    { "task": "Segmentation",
-      "name": "CLARIN-DK Tool Chain: Computes segmentation without tokenization (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Computes segmentation without tokenization. The web service returns a zip file containing original input and the results of all analyses.",
-      "languages": ["dan"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "da-segment"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "Segmentation",
-      "name": "CLARIN-DK Tool Chain: Computes segmentation without tokenization (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Computes segmentation without tokenization. The web service returns a zip file containing original input and the results of all analyses.",
-      "languages": ["eng"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "en-segment"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "Segmentation",
-      "name": "CLARIN-DK Tool Chain: Computes segmentation with tokenization (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Computes segmentation with tokenization. The web service returns a zip file containing original input and the results of all analyses.",
-      "languages": ["dan"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "da-tokensegment"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "Segmentation",
-      "name": "CLARIN-DK Tool Chain: Computes segmentation with tokenization (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Computes segmentation with tokenization. The web service returns a zip file containing original input and the results of all analyses.",
-      "languages": ["eng"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "en-tokensegment"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "Segmentation",
-      "name": "CLARIN-DK Tool Chain: Computes segmentation with tokenization and BRILL POS-Tagging (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Computes segmentation with tokenization and BRILL POS-Tagging . The web service returns a zip file containing original input and the results of all analyses.",
-      "languages": ["dan"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip",
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "da-tokensegmentPOS"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
-    { "task": "Segmentation",
-      "name": "CLARIN-DK Tool Chain: Computes segmentation with tokenization and BRILL POS-Tagging (web service)",
-      "softwareType": "webService",
-      "requestType": "get",	  
-      "logo": "clarindk.jpg",		  
-      "homepage": "https://clarin.dk/clarindk/toolchains-wizard.jsp",
-      "location": "Copenhagen, Denmark",		  	  	  
-      "creators": "Bart Jongejan",
-      "contact": {
-	  "person": "Bart Jongejan",
-	  "email": "bartj@hum.ku.dk",
-      },
-      "version": "unknown",
-      "licence": "public",                
-      "authentication": "no",
-      "description": "Computes segmentation with tokenization and BRILL POS-Tagging . The web service returns a zip file containing original input and the results of all analyses.",
-      "languages": ["eng"],
-      "langEncoding": "639-1",
-      "mimetypes": [
-	  "text/plain"
-	  , "application/rtf"		      
-	  , "application/pdf"
-      ],
-      "output": "application/zip", 		  		  		  
-      "url": "https://clarin.dk/toolchains/run",
-      "parameters": { 
-	  "input"    : "self.linkToResource",
-	  "type"     : "let rtnValue = 'flat'; switch(mimetype) { case 'text/plain' : rtnValue = 'flat'; break; case 'application/pdf' : rtnValue = 'pdf'; break; case 'application/rtf' : rtnValue = 'doc'; break; default: rtnValue = 'flat'; } return rtnValue;",
-	  "workflow" : "en-tokensegmentPOS"
-      },
-      "mapping": {
-	  "input"    : "URL",
-	  "type"     : "Iformat",
-      }
-    },
-
 
     { "task": "Sentiment Analysis",
+      "softwareType": "quantitative",
       "name": "Concraft -> Sentipejd",
       "logo": "zil.png",		  		  		  
       "homepage": "http://iis.ipipan.waw.pl/2008/proceedings/iis08-20.pdf",
@@ -2735,6 +1460,7 @@ const Registry = [
     },
     
     { "task": "Shallow Parsing",
+      "softwareType": "qualitative",
       "name": "Concraft->Spejd",
       "logo": "zil.png",		  		  		  
       "homepage": "http://zil.ipipan.waw.pl/Spejd",
@@ -2762,6 +1488,7 @@ const Registry = [
     
     {
 	"task": "Shallow Parsing",
+	"softwareType": "qualitative",
 	"name": "Spejd",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -2786,8 +1513,10 @@ const Registry = [
 	    "analysis": "spejd"
 	}
     },
+
     {
 	"task": "Spatial expression detection",
+	"softwareType": "qualitative",
 	"name": "Spatial",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -2813,8 +1542,8 @@ const Registry = [
 	}
     },
 
-
     { "task": "Spelling correction",
+      "softwareType": "qualitative",
       "name": "Valkuil (plain text)",
       "logo": "valkuil.jpg",		  
       "homepage": "http://valkuil.net",
@@ -2843,6 +1572,7 @@ const Registry = [
     },
     
     { "task": "Spelling correction",
+      "softwareType": "qualitative",
       "name": "Valkuil (folia+xml)",
       "logo": "valkuil.jpg",		  		  
       "homepage": "https://languagemachines.github.io/Valkuil/",
@@ -2871,6 +1601,7 @@ const Registry = [
     },
     
     { "task": "Spelling correction",
+      "softwareType": "qualitative",
       "name": "Fowlt (plain text)",
       "logo": "fowlt.jpg",		  
       "homepage": "http://fowlt.net",
@@ -2899,6 +1630,7 @@ const Registry = [
     },
 
     { "task": "Spelling correction",
+      "softwareType": "qualitative",
       "name": "Fowlt (xml+folia)",
       "logo": "fowlt.jpg",		  
       "homepage": "http://fowlt.net",
@@ -2928,6 +1660,7 @@ const Registry = [
     
     {
 	"task": "Morpho-syntactic tagger",
+	"softwareType": "qualitative",
 	"name": "MorphoDiTa",
 	"logo": "clarin-pl.png",	
 	"homepage": "http://ws.clarin-pl.eu",
@@ -2964,6 +1697,7 @@ const Registry = [
     
     {
 	"task": "Morpho-syntactic tagger",	
+	"softwareType": "qualitative",
 	"name": "Tagger NLTK",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -2998,6 +1732,7 @@ const Registry = [
     },
     
     { "task": "Distant Reading",
+      "softwareType": "quantitative",
       "name": "Voyant Tools",
       "logo": "voyant-tools.jpg",		  
       "homepage": "http://voyant-tools.org",
@@ -3029,6 +1764,7 @@ const Registry = [
     },
 
     {   "task": "Stylometry",
+	"softwareType": "quantitative",
 	"name": "WebSty",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -3056,6 +1792,7 @@ const Registry = [
     },
 
     {   "task": "Topic Modelling",
+	"softwareType": "quantitative",
 	"name": "Topic",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -3084,35 +1821,7 @@ const Registry = [
     
     {
 	"task": "Text Summarization",
-	"name": "SUMMA Text Summarization - GATE Cloud (web service)",
-	"softwareType": "webService",
-	"requestType": "post",
-	"logo": "gateCloud.png",		  
-	"homepage": "https://cloud.gate.ac.uk/shopfront/sampleServices",
-	"location": "Sheffield, UK",
-	"creators": "GATE developers",
-	"contact": {
-	    "person": "The GATE Cloud developers",
-	    "email": "Plase fill out the web form at https://cloud.gate.ac.uk/contact/email",
-	},
-	"version": "unknown",
-	"authentication": "no",		  
-	"licence": "Please go to the GATE Cloud web page", 
-	"description":  "The SUMMA Text Summarization (EN) uses the SUMMA toolkit developed by Horacio Saggion to provide a generic English document summarizer. This specific pipeline uses Part-of-Speech and TF.IDF scoring to produce the summary. THIS IS AN EXPERIMENTAL INTEGRATION. Note that the service is also available at https://cloud.gate.ac.uk/shopfront/sampleServices, offering a nice visualization of the processing.",
-	"langEncoding": "639-1",
-	"languages": ["eng"],
-	"mimetypes": ["text/plain"],
-	"url": "https://cloud-api.gate.ac.uk/process-document/summa-EN-summarization-pipeline",
-	"parameters": {
-	    "input"   : "self.linkToResource"
-	},		  
-	"mapping": {
-	    "input"   : "data"
-	},
-    },
-    
-    {
-	"task": "Text Summarization",
+	"softwareType": "quantitative",
 	"name": "Summarize",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -3140,6 +1849,7 @@ const Registry = [
 
     {
 	"task": "TF, IDF, TF-IDF calculation",
+	"softwareType": "qualitative",
 	"name": "TF-IDF",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -3164,7 +1874,9 @@ const Registry = [
 	    "analysis": "tfidf"
 	}
     },
+    
     { "task": "Tokenisation",
+      "softwareType": "qualitative",
       "name": "Ucto",
       "logo": "YourLogoComesHere.png",		  
       "homepage": "https://languagemachines.github.io/ucto/",
@@ -3198,39 +1910,9 @@ const Registry = [
 	  "lang"         : "untokinput_language"
       }
     },
-
-    { "task": "Tokenisation",
-      "name": "ILC Tokenizer (web service)",
-      "softwareType": "webService",
-      //"softwareType": "browserBased",
-      "requestType": "get",	  
-      "logo": "YourLogoComesHere.png", // Fix this
-      "homepage": "http://ilc4clarin.ilc.cnr.it/services/ltfw/readme",
-      "location": "Pisa, Italiy",
-      "creators": "Ricardo del Gratta",
-      "contact": {
-	  "person": "Riccardo Del Gratta",
-	  "email": "riccardo.delgratta@gmail.com",
-      },
-      "version": "unknown",
-      "authentication": "no",		  
-      "licence": "unknown.", 
-      "description": "This is the ILC tokenizer (web service) for Italian, French, German, English, Spanish und Dutch.",
-      "langEncoding": "639-3",
-      "languages": ["ita", "fra", "deu", "eng", "spa", "nld"],
-      "mimetypes": ["text/plain"],
-      "url": "http://ilc4clarin.ilc.cnr.it/services/ltfw/wl/tokenizer/lrs",
-      "parameters": {
-	  "input"   : "self.linkToResource", 
-	  "lang"    : "self.linkToResourceLanguage",
-      },		  
-      "mapping": {
-	  "input"   : "url",
-	  "lang"    : "lang" // fix this!
-      },
-    },
     
     { "task": "Tokenisation",
+      "softwareType": "qualitative",
       "name": "WebLicht-Tokenization-TUR",
       "logo": "weblicht.jpg",		  
       "homepage": "https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page",
@@ -3260,77 +1942,9 @@ const Registry = [
 	  "analysis": "token"                    
       }
     },
-
     
-    // { "task": "Voice Synthesis",
-    //   "name": "CLARIN-DK Tool Box (espeak)",
-    //   "logo": "clarindk.jpg",		  
-    //   "homepage": "https://clarin.dk/clarindk/forside.jsp",
-    //   "location": "Copenhagen, Denmark (CLAM Webservices)",
-    //   "creators": "Bart Jongejan et al.",
-    //   "contact": {
-    //       "person": "Bart Jongejan",
-    //       "email": "bartj@hum.ku.dk",
-    //   },
-    //   "version": "0.8.3",
-    //   "licence": "public",
-    //   "authentication": "no",		  
-    //   "description":  "Text to speech software. History. Originally known as speak and originally written for Acorn/RISC_OS computers starting in 1995. This version is an enhancement and re-write, including a relaxation of the original memory and processing power constraints, and with support for additional languages.",
-    //   "langEncoding": "639-1",
-    //   "languages": ["afr", "bul", "bos", "cat", "ces", "cym", "dan", "ell", "eng", "epo", "spa", "est", "fin", "fas", "fra", 
-    // 	      "hin", "hrv", "hun", "hye", "ind", "isl", "ita", "kat", "kan", "kur", "lat", "lav", "mkd", "mlg", "nld",
-    // 	      "pol", "por", "ron", "rus", "slk", "sqi", "srp", "swe", "swa", "tam", "tur", "ukr", "vie", "zho"],
-    //   "mimetypes": [  "text/plain",
-    // 		"application/pdf" // may add other mimetypes
-    // 	     ],
-    //   "url": ["http://cst.dk:8080/tools/createByGoalChoice"], 
-    //   "parameters": {  input   : "self.linkToResource", 
-    // 		lang    : "self.linkToResourceLanguage",                 
-    // 		"analysis": "voiceSynthesis",
-    // 		UIlanguage: "en"				
-    // 	     },
-
-    //   "mapping":   { input        : "URL",
-    // 	       lang         : "language"
-    // 	     }		  
-    // },
-
-
-
-    // { "task": "OCR Engine",
-    //   "name": "CLARIN-DK Tool Box (Tesseract | CuneiForm)",
-    //   "logo": "clarindk.jpg",		  		  
-    //   "homepage": "https://clarin.dk/clarindk/forside.jsp",		  		  
-    //   "location": "Copenhagen, Denmark (CLAM Webservices)",
-    //   "creators": "Bart Jongejan et al.",
-    //   "contact": {
-    //       "person": "Bart Jongejan",
-    //       "email": "bartj@hum.ku.dk",
-    //   },
-    //   "version": "0.8.3",
-    //   "licence": "public",
-    //   "authentication": "no",		  
-    //   "description":  "CLARIN-DK Tool Box (Tesseract | CuneiForm). Tesseract is probably the most accurate open source OCR engine available. Combined with the Leptonica Image Processing Library it can read a wide variety of image formats and convert them to text in over 60 languages. It was one of the top 3 engines in the 1995 UNLV Accuracy test. Between 1995 and 2006 it had little work done on it, but since then it has been improved extensively by Google. It is released under the Apache Licence 2.0. Note that the CLARIN-DL Tool Box GUI gives you also access to the Russian CuneiForm system.",
-    //   "langEncoding": "639-1",		  "languages": ["dan","eng","generic"],
-    //   "mimetypes": [
-    //       "image/gif", 
-    //       "image/jpeg", 
-    //       "image/png", 
-    //       "image/tiff", 
-    //   ],
-    //   "url": ["http://cst.dk:8080/tools/createByGoalChoice"], 
-    //   "parameters": {  input   : "self.linkToResource", 
-    // 		lang    : "self.linkToResourceLanguage",                 
-    // 		"analysis": "txt",
-    // 		UIlanguage: "en"				
-    // 	     },
-    //   "mapping":   { input        : "URL",
-    // 	       lang         : "language"
-    // 	     }		  
-    // },		
-
-
     { "task": "Text Analytics",
+      "softwareType": "quantitative",
       "name": "T-scan",
       "logo": "tscan.jpg",		  
       "homepage": "https://github.com/proycon/tscan",
@@ -3395,6 +2009,7 @@ const Registry = [
 
     {
 	"task": "Text Enhancement",
+	"softwareType": "qualitative",
 	"name": "Apache Stanbol Enhancer",
 	"logo": "acdh.png",		  		
 	"homepage": "https://stanbol.apache.org",
@@ -3424,6 +2039,7 @@ const Registry = [
     },
 
     { "task": "Text Summarization",
+      "softwareType": "quantitative",
       "name": "Concraft -> Bartek -> NicolasSummarizer",
       "logo": "zil.png",		  		  		  
       "homepage": "http://zil.ipipan.waw.pl/Nicolas",
@@ -3449,46 +2065,9 @@ const Registry = [
       }
     },
     
-    // seems like BAS only offers German voice(s) of Mary. @ Jul 25, website mary.dfki.de not working.
-    {
-	"task": "Voice Synthesis",
-	"name": "Mary TTS (web service)",
-	"logo": "mary.jpg",
-	"softwareType": "webService",
-	"requestType": "form-data (input key must have file value)",		  	
-	"homepage": "http://mary.dfki.de",
-	"location": "BAS, Muenchen",
-	"creators": "Marc Schröder et al.",
-	"contact": {
-	    "person": "Marc Schroeder",
-	    "email": "",
-	},
-	"version": "> 5.1",
-	"licence": "public",
-	"authentication": "no",		  
-	"description":  "MaryTTS is an open-source, multilingual Text-to-Speech Synthesis platform written in Java. It was originally developed as a collaborative project of DFKI’s Language Technology Lab and the Institute of Phonetics at Saarland University. It is now maintained by the Multimodal Speech Processing Group in the Cluster of Excellence MMCI and DFKI.",
-	"langEncoding": "639-1",
-	"languages": ["deu"],
-	"mimetypes": [
-	    "text/plain"
-	],
-	"url": "https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runTTSFile", 
-	"parameters": {
-	    "input"   : "self.linkToResource", 
-	    "AUDIO"   : "WAVE_FILE",
-	    "INPUT_TYPE" : "TEXT",
-	    "VOICE" : "bits1unitselautolabel",
-	    "OUTPUT_TYPE" : "AUDIO"
-	},
-	
-	"mapping":   {
-	    "input" : "INPUT_TEXT",
-	}		  
-    },
-    
-
     {
 	"task": "Word sense disambiguation",
+	"softwareType": "qualitative",
 	"name": "WoSeDon",
 	"logo": "clarin-pl.png",
 	"homepage": "http://ws.clarin-pl.eu",
@@ -3513,15 +2092,6 @@ const Registry = [
 	    "analysis": "wsd"
 	}
     },
-    
-    // <form id="f_decode" method="post" enctype="multipart/form-data" accept="application/tei+xml" action="decode.perl">
-
-    // curl -X POST  "http://localhost:8080/wl/tokenizer/plainget?lang=ita&url=https://raw.githubusercontent.com/clarin-eric/LRS-Hackathon/master/samples/resources/txt/hermes-it.txt"
-
-    // /kaf/tokenizer/plainget (it.cnr.ilc.tokenizer.service.resources.TokenizerKafResource)
-    
-    // wget "http://localhost:8080/wl/tokenizer/plainget?lang=it&url=https://raw.githubusercontent.com/clarin-eric/LRS-Hackathon/master/samples/resources/txt/hermes-it.txt" -O test
-
 ];
 
 export default Registry;
