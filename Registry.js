@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Registry.js
-// Time-stamp: <2018-11-29 21:37:27 (zinn)>
+// Time-stamp: <2018-12-19 10:32:58 (zinn)>
 // -------------------------------------------
 
 const Registry = [
@@ -767,6 +767,7 @@ const Registry = [
 	}
     },
 
+    /*
     {
 	"task": "Dependency Parsing",
 	"softwareType": "qualitative",
@@ -822,7 +823,7 @@ const Registry = [
 	    "token":      "27061e4d-3567-482d-9f12-3a1af5e42ab9-843339462"
 	}
     },
-   
+    */   
     {
 	"task": "Named Entity Recognition",
 	"softwareType": "qualitative",
