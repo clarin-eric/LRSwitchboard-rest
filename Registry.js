@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Registry.js
-// Time-stamp: <2018-12-19 10:32:58 (zinn)>
+// Time-stamp: <2019-01-15 09:51:13 (zinn)>
 // -------------------------------------------
 
 const Registry = [
@@ -11,7 +11,7 @@ const Registry = [
       "softwareType": "qualitative",
       "name": "Iobber",
       "logo": "clarin-pl.png",
-      "homepage": "http://ws.clarin-pl.eu",
+      "homepage": "https://ws.clarin-pl.eu",
       "location": "Wrocław, Poland",
       "creators": "Clarin-PL",
       "contact": {
@@ -26,7 +26,7 @@ const Registry = [
       "langEncoding": "639-1",
       "mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
       "output": ["application/xml"],
-      "url": "http://ws.clarin-pl.eu/weblicht.html",
+      "url": "https://ws.clarin-pl.eu/weblicht.html",
       "parameters": {
 	  "input": "self.linkToResource",
 	  "lang": "pl",
@@ -101,7 +101,7 @@ const Registry = [
       "softwareType": "qualitative",
       "name": "MaltParser",
       "logo": "clarin-pl.png",
-      "homepage": "http://ws.clarin-pl.eu",
+      "homepage": "https://ws.clarin-pl.eu",
       "location": "Wrocław, Poland",
       "creators": "Clarin-PL",
       "contact": {
@@ -116,7 +116,7 @@ const Registry = [
       "langEncoding": "639-1",
       "mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
       "output" : ["CoNLL Format"],      
-      "url": "http://ws.clarin-pl.eu/weblicht.html",
+      "url": "https://ws.clarin-pl.eu/weblicht.html",
       "parameters": {
 	  "input": "self.linkToResource",
 	  "lang": "pl",
@@ -429,7 +429,7 @@ const Registry = [
 	"softwareType": "quantitative",
 	"name": "TermoPL",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -444,7 +444,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["application/json"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -457,7 +457,7 @@ const Registry = [
 	"softwareType": "quantitative",
 	"name": "Inkluz",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -472,7 +472,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["application/octet-stream"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -485,7 +485,7 @@ const Registry = [
 	"softwareType": "quantitative",
 	"name": "ReSpa",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -500,7 +500,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["application/xml"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -603,7 +603,7 @@ const Registry = [
 	"softwareType": "qualitative",
 	"name": "Morfeusz 2",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -618,7 +618,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["application/xml"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -646,7 +646,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["application/xml"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -729,7 +729,7 @@ const Registry = [
 	"authentication": "no",		  
 	"licence": "public",
 	"description": "This is an experimental integration of a D4Science NLP processing service hub. This service runs a number of NER tools in parallel, and merges their results. It identifies names of persons, locations, organizations, as well as money amounts, time and date expressions -- and other expressions -- in English, French, Italian, Spanish and German texts automatically.",
-	"languages": ["eng", "fra", "ita", "spa", "ger"],
+	"languages": ["eng", "fra", "ita", "spa", "deu"],
 	"langEncoding": "639-1",		  
 	"mimetypes": ["text/plain"],
 	"output": ["application/xml"],
@@ -767,7 +767,6 @@ const Registry = [
 	}
     },
 
-    /*
     {
 	"task": "Dependency Parsing",
 	"softwareType": "qualitative",
@@ -785,7 +784,7 @@ const Registry = [
 	"authentication": "no",		  
 	"licence": "public",
 	"description": "This is an experimental integration of a D4Science NLP processing service (spaCy). This service identifies performs dependency parsing for plain German text. For more information on spaCy, see https://spacy.io.",
-	"languages": ["ger"],
+	"languages": ["deu"],
 	"langEncoding": "639-1",		  // not used
 	"mimetypes": ["text/plain"],
 	"output": ["text/tab-separated-values"],
@@ -823,13 +822,13 @@ const Registry = [
 	    "token":      "27061e4d-3567-482d-9f12-3a1af5e42ab9-843339462"
 	}
     },
-    */   
+
     {
 	"task": "Named Entity Recognition",
 	"softwareType": "qualitative",
 	"name": "Liner2",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -844,7 +843,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["application/xml"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -1067,7 +1066,7 @@ const Registry = [
 	"softwareType": "qualitative",
 	"name": "NER NLTK",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -1090,7 +1089,7 @@ const Registry = [
 		      // "text/html", // not yet supported
 		      "application/rtf"],
 	"output": ["application/xml"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "en",
@@ -1410,7 +1409,7 @@ const Registry = [
 	"softwareType": "qualitative",
 	"name": "Serel",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -1425,7 +1424,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["application/xml"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -1492,7 +1491,7 @@ const Registry = [
 	"softwareType": "qualitative",
 	"name": "Spejd",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -1507,7 +1506,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["application/xml"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -1520,7 +1519,7 @@ const Registry = [
 	"softwareType": "qualitative",
 	"name": "Spatial",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -1535,7 +1534,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["application/json"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -1664,7 +1663,7 @@ const Registry = [
 	"softwareType": "qualitative",
 	"name": "MorphoDiTa",
 	"logo": "clarin-pl.png",	
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": ["Clarin-PL"],
 	"contact": {
@@ -1687,7 +1686,7 @@ const Registry = [
 		      "text/html",
 		      "application/rtf"],
 	"output": ["application/xml"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"pid": "",
 	"parameters": {
 	    "input": "self.linkToResource",
@@ -1701,7 +1700,7 @@ const Registry = [
 	"softwareType": "qualitative",
 	"name": "Tagger NLTK",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -1724,7 +1723,7 @@ const Registry = [
 		      // "text/html", (not yet supported)
 		      "application/rtf"],
 	"output": ["application/xml"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "en",
@@ -1758,7 +1757,7 @@ const Registry = [
 		    "text/tei+xml;format-variant=tei-dta"
 		   ], 
       "output": ["none"], 
-      "url": "http://voyant-tools.org/",
+      "url": "https://voyant-tools.org/",
       "parameters": { 
 	  "input"        : "self.linkToResource"
       }
@@ -1768,7 +1767,7 @@ const Registry = [
 	"softwareType": "quantitative",
 	"name": "WebSty",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -1779,11 +1778,11 @@ const Registry = [
 	"licence": "public",
 	"authentication": "no",	    	    
 	"description": "Similarity and clustering of texts in Polish. The tools used include: Morfeusz 2 with SGJP dictionary (for morphological analysis), wcrft2 (for tagging), Liner2 (for named entities recognition), Fextor (for extraction of feaures from texts); Cluto (for clustering), result visualisation: D3.js, D3-tip.",
-	"languages": ["pol", "eng", "deu", "rus", "hun", "spa"],
+	"languages": ["pol"],
 	"langEncoding": "639-1",
 	"mimetypes": ["application/zip"],
 	"output": ["application/octet-stream"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang":  "self.linkToResourceLanguage",
@@ -1792,11 +1791,41 @@ const Registry = [
 	}
     },
 
+    /* 
+    {   "task": "Stylometry",
+	"softwareType": "quantitative",
+	"name": "WebStyML",
+	"logo": "clarin-pl.png",
+	"homepage": "https://ws.clarin-pl.eu",
+	"location": "Wrocław, Poland",
+	"creators": "Clarin-PL",
+	"contact": {
+	    "person": "Tomasz Walkowiak",
+	    "email": "tomasz.walkowiak@pwr.edu.pl"
+	},
+	"version": "1.0",
+	"licence": "public",
+	"authentication": "no",	    	    
+	"description": "Similarity and clustering of texts in Polish, English, German, Russian, Hungarian, and Spanish. Upload your (language-homogenous) resources bundled as a zip file. Used tools include Apache Tika, UDPipe and SuperMatrix.",
+	"languages": ["pol", "eng", "deu", "rus", "hun", "spa"],
+	"langEncoding": "639-1",
+	"mimetypes": ["application/zip"],
+	"output": ["application/octet-stream"],
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
+	"parameters": {
+	    "input": "self.linkToResource",
+	    "lang":  "self.linkToResourceLanguage",
+	    "analysis": "webstyml",
+	    "batch": "true"
+	}
+    },
+    */
+
     {   "task": "Topic Modelling",
 	"softwareType": "quantitative",
 	"name": "Topic",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepages": "http://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -1811,7 +1840,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["application/zip"],
 	"output": ["application/octet-stream"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -1825,7 +1854,7 @@ const Registry = [
 	"softwareType": "quantitative",
 	"name": "Summarize",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -1840,7 +1869,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["application/octet-stream"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -1853,7 +1882,7 @@ const Registry = [
 	"softwareType": "qualitative",
 	"name": "TF-IDF",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -1868,7 +1897,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["text/csv"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
@@ -2071,7 +2100,7 @@ const Registry = [
 	"softwareType": "qualitative",
 	"name": "WoSeDon",
 	"logo": "clarin-pl.png",
-	"homepage": "http://ws.clarin-pl.eu",
+	"homepage": "https://ws.clarin-pl.eu",
 	"location": "Wrocław, Poland",
 	"creators": "Clarin-PL",
 	"contact": {
@@ -2086,7 +2115,7 @@ const Registry = [
 	"langEncoding": "639-1",
 	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "application/rtf"],
 	"output": ["application/xml"],
-	"url": "http://ws.clarin-pl.eu/weblicht.html",
+	"url": "https://ws.clarin-pl.eu/weblicht.html",
 	"parameters": {
 	    "input": "self.linkToResource",
 	    "lang": "pl",
