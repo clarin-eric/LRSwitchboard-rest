@@ -1,7 +1,13 @@
 # Changelog
 	All notable changes to this project will be documented in this file.
 
-
+## [1.4.3] - 2019-16-11
+	Changed
+	- version now synchronised with switchboard version
+	- added new languages for WebSty
+	- re-added SpaCy entries (D4Science)
+	- removed duplicate slots
+	
 ## [1.1] - 2018-11-30
 ### Removed
 	- all entries representing web services (deprecated)

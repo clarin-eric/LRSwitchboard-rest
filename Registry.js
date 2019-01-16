@@ -1,9 +1,9 @@
 // -------------------------------------------
 // The CLARIN Language Resource Switchboard
 // 2016-18 Claus Zinn, University of Tuebingen
-// 
+//
 // File: Registry.js
-// Time-stamp: <2019-01-15 09:51:13 (zinn)>
+// Time-stamp: <2019-01-16 09:31:26 (zinn)>
 // -------------------------------------------
 
 const Registry = [
@@ -985,7 +985,6 @@ const Registry = [
       "version": "v1.0",
       "authentication": "no",		  
       "licence": "public",
-      "authentication": "no",	  
       "description": "Statistical named entity recognition tool based on linear-chain conditional random fields. Part of: Multiservice, a robust linguistic Web service for Polish.",
       "languages": ["pol"],
       "langEncoding": "639-1",		  
@@ -1013,7 +1012,6 @@ const Registry = [
       "authentication": "no",		  
       "licence": "public",
       "description": "WebLicht Easy Chain for German Named Entity Recognition (German). The pipeline makes use of WebLicht's TCF converter, the IMS tokenizer, the IMS TreeTagger, and a German Named Entity Recognizer that has been trained based on a maximum entropy approach using the OpenNLP maxent library. WebLicht's Tundra can be used to visualize the result.",
-      "languages": ["eng"],
       "languages": ["deu"],
       "langEncoding": "639-1",		  
       "mimetypes": ["text/plain",
@@ -1777,8 +1775,8 @@ const Registry = [
 	"version": "1.0",
 	"licence": "public",
 	"authentication": "no",	    	    
-	"description": "Similarity and clustering of texts in Polish. The tools used include: Morfeusz 2 with SGJP dictionary (for morphological analysis), wcrft2 (for tagging), Liner2 (for named entities recognition), Fextor (for extraction of feaures from texts); Cluto (for clustering), result visualisation: D3.js, D3-tip.",
-	"languages": ["pol"],
+	"description": "Similarity and clustering of texts in Polish. The tools used include: Morfeusz 2 with SGJP dictionary (for morphological analysis), wcrft2 (for tagging), Liner2 (for named entities recognition), Fextor (for extraction of feaures from texts); Cluto (for clustering), result visualisation: D3.js, D3-tip. For zip files with content in English, German, Russian, Hungarian, and Spanish, users are redirected to WebStyML.",
+	"languages": ["pol", "eng", "deu", "rus", "hun", "spa"],	
 	"langEncoding": "639-1",
 	"mimetypes": ["application/zip"],
 	"output": ["application/octet-stream"],
@@ -1790,36 +1788,6 @@ const Registry = [
 	    "batch": "true"
 	}
     },
-
-    /* 
-    {   "task": "Stylometry",
-	"softwareType": "quantitative",
-	"name": "WebStyML",
-	"logo": "clarin-pl.png",
-	"homepage": "https://ws.clarin-pl.eu",
-	"location": "Wrocław, Poland",
-	"creators": "Clarin-PL",
-	"contact": {
-	    "person": "Tomasz Walkowiak",
-	    "email": "tomasz.walkowiak@pwr.edu.pl"
-	},
-	"version": "1.0",
-	"licence": "public",
-	"authentication": "no",	    	    
-	"description": "Similarity and clustering of texts in Polish, English, German, Russian, Hungarian, and Spanish. Upload your (language-homogenous) resources bundled as a zip file. Used tools include Apache Tika, UDPipe and SuperMatrix.",
-	"languages": ["pol", "eng", "deu", "rus", "hun", "spa"],
-	"langEncoding": "639-1",
-	"mimetypes": ["application/zip"],
-	"output": ["application/octet-stream"],
-	"url": "https://ws.clarin-pl.eu/weblicht.html",
-	"parameters": {
-	    "input": "self.linkToResource",
-	    "lang":  "self.linkToResourceLanguage",
-	    "analysis": "webstyml",
-	    "batch": "true"
-	}
-    },
-    */
 
     {   "task": "Topic Modelling",
 	"softwareType": "quantitative",
@@ -2042,7 +2010,6 @@ const Registry = [
 	"softwareType": "qualitative",
 	"name": "Apache Stanbol Enhancer",
 	"logo": "acdh.png",		  		
-	"homepage": "https://stanbol.apache.org",
 	"homepage": "http://www.oeaw.ac.at/acdh",
 	"location": "Vienna, Austria",		    
 	"creators": "Apache Foundation (software), Austrian Center of Digital Humanities (enhancement chains and configuration)",
