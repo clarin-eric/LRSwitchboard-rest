@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 //
 // File: Registry.js
-// Time-stamp: <2019-01-16 09:31:26 (zinn)>
+// Time-stamp: <2019-02-28 09:31:19 (zinn)>
 // -------------------------------------------
 
 const Registry = [
@@ -2032,6 +2032,36 @@ const Registry = [
 	},
 	"mapping":   {
 	    "input"     : "resourceUri" 
+	}
+    },
+
+    {
+	"task": "Text Enhancement",
+	"softwareType": "qualitative",
+	"name": "Disanbol",
+	"logo": "acdh.png",		  		
+	"homepage": "http://www.oeaw.ac.at/acdh",
+	"location": "Vienna, Austria",		    
+	"creators": "Apache Foundation (software), Austrian Center of Digital Humanities (enhancement chains and configuration)",
+	"contact": {
+	    "person": "Matej Durco",
+	    "email": "acdh-tech@oeaw.ac.at <mailto:acdh-tech@oeaw.ac.at>"
+	},
+	"version": "v1.0",
+	"authentification": "no",		
+	"licence": "public",
+	"description": "This is a stateless interface to allow clients to submit content to analyze by the EnhancementEngines and get the resulting RDF enhancements rendered as HTML at once without storing anything on the server-side.",
+	"languages": ["eng"],
+	"langEncoding": "639-1",		
+	"mimetypes": ["text/plain"],
+	"output": ["application/xhtml+xml"],
+	"url": "https://distanbol.acdh.oeaw.ac.at/convert",		
+	"parameters": {
+	    "input"     : "self.linkToResource",
+	    "confidence" : "confidence"
+	},
+	"mapping":   {
+	    "input"     : "URL" 
 	}
     },
 
