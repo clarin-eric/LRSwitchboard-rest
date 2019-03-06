@@ -3,7 +3,7 @@
 // 2018- Claus Zinn, University of Tuebingen
 // 
 // File: index.js (for rest-based service)
-// Time-stamp: <2018-07-26 13:52:38 (zinn)>
+// Time-stamp: <2019-02-28 11:25:10 (zinn)>
 // -------------------------------------------
 
 
@@ -68,6 +68,12 @@ app.get('/api', function (req, res) {
 app.get('/api/tools/', function(req, res) {
     console.log('/api/tools', req);    
     res.send( new Matcher().findApplicableTools( req.query ) );    
+});
+
+/* to get a whitelist of all mediatypes that the registry's tool space can process */
+app.get('/api/mimetypes/', function(req, res) {
+    console.log('/api/mimetypes', req);    
+    res.send( new Matcher().collectSupportedMimetypes( ));    
 });
 
 /*

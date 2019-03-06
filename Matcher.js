@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Matcher.js (for rest-based service)
-// Time-stamp: <2018-10-16 15:26:12 (zinn)>
+// Time-stamp: <2019-02-28 14:46:35 (zinn)>
 // -------------------------------------------
 
 import uuid from 'node-uuid';
@@ -13,9 +13,24 @@ export default class Matcher {
 
     constructor() {
 	this.registeredTools = Registry;
-//	this.groupTools = this.groupTools.bind(this);
     }
 
+    collectSupportedMimetypes() {
+	const tools = this.registeredTools;
+	let mimetypeSet = new Set();
+	
+	for (var i = 0; i<tools.length; i++) {
+	    const toolMimetypes = tools[i].mimetypes;
+	    console.log('checking', tools[i].name);
+	    for (var j = 0; j<toolMimetypes.length; j++) {
+		console.log("--> adding", toolMimetypes[j]);
+		mimetypeSet.add( toolMimetypes[j] );
+	    }
+	}
+
+	return mimetypeSet;
+    }
+    
     // construct a dictionary to group all tools in terms of the tasks they can perform
     // key: task, value: tools
     groupTools( tools ){
