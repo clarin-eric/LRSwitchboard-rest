@@ -3,7 +3,7 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 // 
 // File: Matcher.js (for rest-based service)
-// Time-stamp: <2019-02-28 14:46:35 (zinn)>
+// Time-stamp: <2019-03-15 16:16:44 (zinn)>
 // -------------------------------------------
 
 import uuid from 'node-uuid';
@@ -30,6 +30,22 @@ export default class Matcher {
 
 	return mimetypeSet;
     }
+
+    collectSupportedLanguages() {
+	const tools = this.registeredTools;
+	let languageSet = new Set();
+	
+	for (var i = 0; i<tools.length; i++) {
+	    const toolLanguages = tools[i].languages;
+	    console.log('checking', tools[i].name);
+	    for (var j = 0; j<toolLanguages.length; j++) {
+		console.log("--> adding", toolLanguages[j]);
+		languageSet.add( toolLanguages[j] );
+	    }
+	}
+
+	return languageSet;
+    }    
     
     // construct a dictionary to group all tools in terms of the tasks they can perform
     // key: task, value: tools
@@ -120,6 +136,19 @@ export default class Matcher {
 			    return tool;
 			} 
 		    });
+	    }
+
+	    if (key == "deployment" ) {
+		if (query[key] == "production" ) {
+		    // only allow tools ready for production
+		    selectedTools = selectedTools.filter(
+			(tool) =>   {
+			    if (tool.deployment == "production") {
+				tool.id = uuid.v4();			    
+				return tool;
+			    }
+			});		
+		}
 	    }
 	    
 	    if (key == "includeWS" ) {

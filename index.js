@@ -3,7 +3,7 @@
 // 2018- Claus Zinn, University of Tuebingen
 // 
 // File: index.js (for rest-based service)
-// Time-stamp: <2019-02-28 11:25:10 (zinn)>
+// Time-stamp: <2019-03-06 21:05:52 (zinn)>
 // -------------------------------------------
 
 
@@ -74,6 +74,12 @@ app.get('/api/tools/', function(req, res) {
 app.get('/api/mimetypes/', function(req, res) {
     console.log('/api/mimetypes', req);    
     res.send( new Matcher().collectSupportedMimetypes( ));    
+});
+
+/* to get a whitelist of all languages that the registry's tool space can process */
+app.get('/api/languages/', function(req, res) {
+    console.log('/api/languages', req);    
+    res.send( new Matcher().collectSupportedLanguages( ));
 });
 
 /*

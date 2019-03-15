@@ -3,11 +3,12 @@
 // 2016-18 Claus Zinn, University of Tuebingen
 //
 // File: Registry.js
-// Time-stamp: <2019-03-06 15:04:32 (zinn)>
+// Time-stamp: <2019-03-15 16:00:23 (zinn)>
 // -------------------------------------------
 
 const Registry = [
     { "task": "Shallow Parsing",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "Iobber",
       "logo": "clarin-pl.png",
@@ -35,6 +36,7 @@ const Registry = [
     },
     
     { "task": "Constituency Parsing",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "WebLicht-Const-Parsing-DE",
       "logo": "weblicht.jpg",		  		  
@@ -67,6 +69,7 @@ const Registry = [
     },
 
     { "task": "Constituency Parsing",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "WebLicht-Const-Parsing-EN",
       "logo": "weblicht.jpg",		  		  
@@ -98,6 +101,7 @@ const Registry = [
     },		
     
     { "task": "Dependency Parsing",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "MaltParser",
       "logo": "clarin-pl.png",
@@ -125,6 +129,7 @@ const Registry = [
     },
     
     { "task": "Coreference Resolution",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "Concraft -> Bartek",
       "logo": "zil.png",		  		  		  
@@ -152,6 +157,7 @@ const Registry = [
     },			
 
     { "task": "Dependency Parsing",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "Concraft -> DependencyParser",
       "logo": "zil.png",		  		  		  
@@ -179,6 +185,7 @@ const Registry = [
     },
     
     { "task": "Dependency Parsing",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-DE",
       "logo": "weblicht.jpg",		  		  
@@ -210,6 +217,7 @@ const Registry = [
     },
     
     { "task": "Dependency Parsing",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-NL-ALPINO",
       "logo": "weblicht.jpg",		  		  
@@ -241,6 +249,7 @@ const Registry = [
     },
     
     { "task": "Dependency Parsing",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-EN",
       "logo": "weblicht.jpg",		  		  
@@ -272,6 +281,7 @@ const Registry = [
     },
 
     { "task": "Dependency Parsing",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-SL (RELDI)",
       "logo": "weblicht.jpg",		  		  
@@ -303,6 +313,7 @@ const Registry = [
     },
     
     { "task": "Dependency Parsing",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-HR (RELDI)",
       "logo": "weblicht.jpg",		  		  
@@ -334,6 +345,7 @@ const Registry = [
     },
     
     { "task": "Dependency Parsing",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "WebLicht-Dep-Parsing-SR (RELDI)",
       "logo": "weblicht.jpg",		  		  
@@ -365,6 +377,7 @@ const Registry = [
     },
     
     { "task": "Dependency Parsing",
+      "deployment": "development",      
       "softwareType": "qualitative",
       "name": "Alpino",
       "logo": "alpino.jpg",		  
@@ -395,6 +408,7 @@ const Registry = [
     },
 
     { "task": "Dependency Parsing",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "UDPipe",
       "logo": "lindat.jpg",
@@ -424,36 +438,37 @@ const Registry = [
       },
     },
 
-    {
-	"task": "Extraction of Polish terminology",
-	"softwareType": "quantitative",
-	"name": "TermoPL",
-	"logo": "clarin-pl.png",
-	"homepage": "https://ws.clarin-pl.eu",
-	"location": "Wrocław, Poland",
-	"creators": "Clarin-PL",
-	"contact": {
-	    "person": "Tomasz Walkowiak",
-	    "email": "tomasz.walkowiak@pwr.edu.pl"
-	},
-	"version": "1.0",
-	"licence": "public",
-	"authentication": "no",	    	    
-	"description": "TermoPL is a tool for automated extraction of terminology from Polish texts.",
-	"languages": ["pol"],
-	"langEncoding": "639-1",
-	"mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "text/rtf"],
-	"output": ["application/json"],
-	"url": "https://ws.clarin-pl.eu/weblicht.html",
-	"parameters": {
-	    "input": "self.linkToResource",
-	    "lang": "pl",
-	    "analysis": "termopl"
-	}
+    { "task": "Extraction of Polish terminology",
+      "deployment": "production",	
+      "softwareType": "quantitative",
+      "name": "TermoPL",
+      "logo": "clarin-pl.png",
+      "homepage": "https://ws.clarin-pl.eu",
+      "location": "Wrocław, Poland",
+      "creators": "Clarin-PL",
+      "contact": {
+	  "person": "Tomasz Walkowiak",
+	  "email": "tomasz.walkowiak@pwr.edu.pl"
+      },
+      "version": "1.0",
+      "licence": "public",
+      "authentication": "no",	    	    
+      "description": "TermoPL is a tool for automated extraction of terminology from Polish texts.",
+      "languages": ["pol"],
+      "langEncoding": "639-1",
+      "mimetypes": ["text/plain", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.oasis.opendocument.text", "application/pdf", "text/html", "text/rtf"],
+      "output": ["application/json"],
+      "url": "https://ws.clarin-pl.eu/weblicht.html",
+      "parameters": {
+	  "input": "self.linkToResource",
+	  "lang": "pl",
+	  "analysis": "termopl"
+      }
     },
-   
+    
     {
 	"task": "Inclusion detection",
+	"deployment": "production",	
 	"softwareType": "quantitative",
 	"name": "Inkluz",
 	"logo": "clarin-pl.png",
@@ -482,6 +497,7 @@ const Registry = [
 
     {
 	"task": "Keyword Extractor",
+	"deployment": "production",	
 	"softwareType": "quantitative",
 	"name": "ReSpa",
 	"logo": "clarin-pl.png",
@@ -509,6 +525,7 @@ const Registry = [
     },
 
     { "task": "Lemmatization",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "WebLicht-Lemmas-DE",
       "logo": "weblicht.jpg",		  		  
@@ -540,6 +557,7 @@ const Registry = [
     },
 
     { "task": "Lemmatization",
+      "deployment": "production",      
       "softwareType": "qualitative",
       "name": "WebLicht-Lemmas-EN",
       "logo": "weblicht.jpg",		  		  
@@ -571,7 +589,8 @@ const Registry = [
     },		
 
     {
-	"task": "Lemmatization",	
+	"task": "Lemmatization",
+	"deployment": "production",	
 	"softwareType": "qualitative",
 	"name": "CSTLemma (hosted by D4Science)",
 	"logo": "d4science.png",		  	    
@@ -600,6 +619,7 @@ const Registry = [
     
     {
 	"task": "Morphological Analysis",
+	"deployment": "production",	
 	"softwareType": "qualitative",
 	"name": "Morfeusz 2",
 	"logo": "clarin-pl.png",
@@ -628,6 +648,7 @@ const Registry = [
 
     {
 	"task": "Morpho-syntactic tagger",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "WCRFT2",
 	"logo": "clarin-pl.png",
@@ -656,6 +677,7 @@ const Registry = [
 
     {
 	"task": "Named Entity Recognition",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "WebLicht-NamedEntities-SL",
 	"logo": "weblicht.jpg",		  	    
@@ -688,6 +710,7 @@ const Registry = [
 
     {
 	"task": "Named Entity Recognition",
+	"deployment": "development",      	
 	"softwareType": "qualitative",
 	"name": "D4Science NER (GATE's Annie)",
 	"logo": "d4science.png",		  	    
@@ -715,6 +738,7 @@ const Registry = [
 
     {
 	"task": "Named Entity Recognition",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "NLP-HUB (multiple NER tools)",
 	"logo": "d4science.png",		  	    
@@ -742,6 +766,7 @@ const Registry = [
     
     {
 	"task": "Named Entity Recognition",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "Liner2 (hosted by D4Science)",
 	"logo": "d4science.png",		  	    
@@ -769,6 +794,7 @@ const Registry = [
 
     {
 	"task": "Dependency Parsing",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "Spacy (hosted by D4Science)",
 	"lifecycle": "beta",
@@ -797,6 +823,7 @@ const Registry = [
 
     {
 	"task": "Dependency Parsing",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "Spacy (hosted by D4Science)",
 	"lifecycle": "beta",
@@ -825,6 +852,7 @@ const Registry = [
 
     {
 	"task": "Named Entity Recognition",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "Liner2",
 	"logo": "clarin-pl.png",
@@ -852,6 +880,7 @@ const Registry = [
     },
 
     { "task": "Machine Translation",
+      "deployment": "development",            
       "softwareType": "qualitative",
       "name": "Oersetter (NLD-FRY)",
       "logo": "oersetter.jpg",		  
@@ -881,6 +910,7 @@ const Registry = [
     },
 
     { "task": "Machine Translation",
+      "deployment": "development",            
       "softwareType": "qualitative",
       "name": "Oersetter (FRY-NLD)",
       "logo": "oersetter.jpg",		  
@@ -910,6 +940,7 @@ const Registry = [
     },		
     
     { "task": "Morphological Analysis",      
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "WebLicht-Morphology-DE",
       "logo": "weblicht.jpg",		  		  
@@ -941,6 +972,7 @@ const Registry = [
     },
     
     { "task": "Morphological Analysis",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "WebLicht-Morphology-EN",
       "logo": "weblicht.jpg",		  		  
@@ -972,6 +1004,7 @@ const Registry = [
     },
 
     { "task": "Named Entity Recognition",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "Concraft -> Nerf",
       "logo": "zil.png",		  		  		  
@@ -998,6 +1031,7 @@ const Registry = [
       }
     },
     { "task": "Named Entity Recognition",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "WebLicht-NamedEntities-DE",
       "logo": "weblicht.jpg",		  
@@ -1029,6 +1063,7 @@ const Registry = [
     },
 
     { "task": "Named Entity Recognition",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "WebLicht-NamedEntities-EN",
       "logo": "weblicht.jpg",		  		  
@@ -1061,6 +1096,7 @@ const Registry = [
     
     {
 	"task": "Named Entity Recognition",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "NER NLTK",
 	"logo": "clarin-pl.png",
@@ -1095,8 +1131,8 @@ const Registry = [
 	}
     },
     
-    {
-	"task": "N-Gramming",
+    { "task": "N-Gramming",
+      "deployment": "development",
       "softwareType": "quantitative",
       "name": "FoLiA-stats",
       "logo": "foliastats.jpg",		  		  
@@ -1126,6 +1162,7 @@ const Registry = [
     },		
 
     { "task": "N-Gramming",
+      "deployment": "development",
       "softwareType": "quantitative",
       "name": "Colibri Core (plain text)",
       "logo": "colibriCore.jpg",		  		  
@@ -1160,6 +1197,7 @@ const Registry = [
     },
 
     { "task": "N-Gramming",
+      "deployment": "development",
       "softwareType": "quantitative",
       "name": "Colibri Core (folia+xml)",
       "logo": "colibriCore.jpg",		  
@@ -1194,6 +1232,7 @@ const Registry = [
     },				
     
     { "task": "NLP suite for Dutch",
+      "deployment": "development",
       "softwareType": "qualitative",
       "name": "Frog (plain text)",
       "logo": "frog.jpg",		  
@@ -1223,6 +1262,7 @@ const Registry = [
     },		
 
     { "task": "NLP suite for Dutch",
+      "deployment": "development",
       "softwareType": "qualitative",
       "name": "Frog (folia+xml)",
       "logo": "frog.jpg",		  
@@ -1252,6 +1292,7 @@ const Registry = [
     },
     
     { "task": "Part-Of-Speech Tagging",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "WebLicht-POSTags-Lemmas-DE",
       "logo": "weblicht.jpg",		  		  
@@ -1283,6 +1324,7 @@ const Registry = [
     },
 
     { "task": "Part-Of-Speech Tagging",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "WebLicht-POSTags-Lemmas-FR",
       "logo": "weblicht.jpg",		  		  
@@ -1314,6 +1356,7 @@ const Registry = [
     },		
 
     { "task": "Part-Of-Speech Tagging",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "WebLicht-POSTags-Lemmas-IT",
       "logo": "weblicht.jpg",		  		  
@@ -1345,6 +1388,7 @@ const Registry = [
     },				
 
     { "task": "Part-Of-Speech Tagging",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "WebLicht-POSTags-Lemmas-EN",
       "logo": "weblicht.jpg",		  		  
@@ -1376,6 +1420,7 @@ const Registry = [
     },
     
     { "task": "Part-Of-Speech Tagging",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "Concraft",
       "logo": "zil.png",		  		  		  
@@ -1404,6 +1449,7 @@ const Registry = [
     
     {
 	"task": "Relation between name entities detection",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "Serel",
 	"logo": "clarin-pl.png",
@@ -1431,6 +1477,7 @@ const Registry = [
     },
 
     { "task": "Sentiment Analysis",
+      "deployment": "production",
       "softwareType": "quantitative",
       "name": "Concraft -> Sentipejd",
       "logo": "zil.png",		  		  		  
@@ -1458,6 +1505,7 @@ const Registry = [
     },
     
     { "task": "Shallow Parsing",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "Concraft->Spejd",
       "logo": "zil.png",		  		  		  
@@ -1486,6 +1534,7 @@ const Registry = [
     
     {
 	"task": "Shallow Parsing",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "Spejd",
 	"logo": "clarin-pl.png",
@@ -1514,6 +1563,7 @@ const Registry = [
 
     {
 	"task": "Spatial expression detection",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "Spatial",
 	"logo": "clarin-pl.png",
@@ -1541,6 +1591,7 @@ const Registry = [
     },
 
     { "task": "Spelling correction",
+      "deployment": "development",
       "softwareType": "qualitative",
       "name": "Valkuil (plain text)",
       "logo": "valkuil.jpg",		  
@@ -1570,6 +1621,7 @@ const Registry = [
     },
     
     { "task": "Spelling correction",
+      "deployment": "development",
       "softwareType": "qualitative",
       "name": "Valkuil (folia+xml)",
       "logo": "valkuil.jpg",		  		  
@@ -1599,6 +1651,7 @@ const Registry = [
     },
     
     { "task": "Spelling correction",
+      "deployment": "development",
       "softwareType": "qualitative",
       "name": "Fowlt (plain text)",
       "logo": "fowlt.jpg",		  
@@ -1628,6 +1681,7 @@ const Registry = [
     },
 
     { "task": "Spelling correction",
+      "deployment": "development",
       "softwareType": "qualitative",
       "name": "Fowlt (xml+folia)",
       "logo": "fowlt.jpg",		  
@@ -1658,6 +1712,7 @@ const Registry = [
     
     {
 	"task": "Morpho-syntactic tagger",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "MorphoDiTa",
 	"logo": "clarin-pl.png",	
@@ -1695,6 +1750,7 @@ const Registry = [
     
     {
 	"task": "Morpho-syntactic tagger",	
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "Tagger NLTK",
 	"logo": "clarin-pl.png",
@@ -1730,6 +1786,7 @@ const Registry = [
     },
     
     { "task": "Distant Reading",
+      "deployment": "production",
       "softwareType": "quantitative",
       "name": "Voyant Tools",
       "logo": "voyant-tools.jpg",		  
@@ -1762,6 +1819,7 @@ const Registry = [
     },
 
     {   "task": "Stylometry",
+	"deployment": "production",
 	"softwareType": "quantitative",
 	"name": "WebSty",
 	"logo": "clarin-pl.png",
@@ -1790,6 +1848,7 @@ const Registry = [
     },
 
     {   "task": "Topic Modelling",
+	"deployment": "production",
 	"softwareType": "quantitative",
 	"name": "Topic",
 	"logo": "clarin-pl.png",
@@ -1819,6 +1878,7 @@ const Registry = [
     
     {
 	"task": "Text Summarization",
+	"deployment": "production",
 	"softwareType": "quantitative",
 	"name": "Summarize",
 	"logo": "clarin-pl.png",
@@ -1847,6 +1907,7 @@ const Registry = [
 
     {
 	"task": "TF, IDF, TF-IDF calculation",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "TF-IDF",
 	"logo": "clarin-pl.png",
@@ -1874,6 +1935,7 @@ const Registry = [
     },
     
     { "task": "Tokenisation",
+      "deployment": "development",
       "softwareType": "qualitative",
       "name": "Ucto",
       "logo": "YourLogoComesHere.png",		  
@@ -1910,6 +1972,7 @@ const Registry = [
     },
     
     { "task": "Tokenisation",
+      "deployment": "production",
       "softwareType": "qualitative",
       "name": "WebLicht-Tokenization-TUR",
       "logo": "weblicht.jpg",		  
@@ -1942,6 +2005,7 @@ const Registry = [
     },
     
     { "task": "Text Analytics",
+      "deployment": "development",
       "softwareType": "quantitative",
       "name": "T-scan",
       "logo": "tscan.jpg",		  
@@ -2007,6 +2071,7 @@ const Registry = [
 
     {
 	"task": "Text Enhancement",
+	"deployment": "development",
 	"softwareType": "qualitative",
 	"name": "Apache Stanbol Enhancer",
 	"logo": "acdh.png",		  		
@@ -2037,6 +2102,7 @@ const Registry = [
 
     {
 	"task": "Text Enhancement",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "Distanbol",
 	"logo": "acdh.png",		  		
@@ -2066,6 +2132,7 @@ const Registry = [
     },
 
     { "task": "Text Summarization",
+      "deployment": "production",
       "softwareType": "quantitative",
       "name": "Concraft -> Bartek -> NicolasSummarizer",
       "logo": "zil.png",		  		  		  
@@ -2094,6 +2161,7 @@ const Registry = [
     
     {
 	"task": "Word sense disambiguation",
+	"deployment": "production",
 	"softwareType": "qualitative",
 	"name": "WoSeDon",
 	"logo": "clarin-pl.png",
