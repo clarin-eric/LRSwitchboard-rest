@@ -386,7 +386,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -417,7 +417,7 @@ const Registry = [
       "creators": "Milan Straka, Jana Straková",
       "contact": {
 	  "person": "Milan Straka",
-	  "email": "straka@ufal.mff.cuni.cz",
+	  "email": "straka@ufal.mff.cuni.cz"
       },
       "version": "v1.2",
       "authentication": "no",		  
@@ -435,7 +435,7 @@ const Registry = [
       "mapping": {
 	  "input"   : "data",
 	  "lang"    : "model"
-      },
+      }
     },
 
     { "task": "Extraction of Polish terminology",
@@ -889,7 +889,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -919,7 +919,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -1141,7 +1141,7 @@ const Registry = [
       "creators": "Ko van der Sloot (TiCC, Tilburg University)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "0.2",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -1171,7 +1171,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -1206,7 +1206,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -1241,7 +1241,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -1271,7 +1271,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -1600,7 +1600,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -1630,7 +1630,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -1660,7 +1660,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -1690,7 +1690,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -1795,11 +1795,11 @@ const Registry = [
       "creators": "Stéfan Sinclair (McGill Alberta) and Geoffrey Rockwell (U Alberta)",
       "contact": {
 	  "person": "Unknown Person",
-	  "email": "Unknown email",
+	  "email": "Unknown email"
       },
       "version": "v2.1",
       "authentication": "no",		  
-      "licence": "public", //but webservice is protected with (free) registration
+      "licence": "public", // but webservice is protected with (free) registration
       "description": "Use it to learn how computers-assisted analysis works. Check out our examples that show you how to do real academic tasks with Voyant. Use it to study texts that you find on the web or texts that you have carefully edited and have on your computer. Use it to add functionality to your online collections, journals, blogs or web sites so others can see through your texts with analytical tools. Use it to add interactive evidence to your essays that you publish online. Add interactive panels right into your research essays (if they can be published online) so your readers can recapitulate your results. Use it to develop your own tools using our functionality and code.",
       // virtually any language
       "languages": ["eng", "deu", "spa", "nld", "fra", "generic"], 
@@ -1944,7 +1944,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "0.8.3",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -1963,7 +1963,7 @@ const Registry = [
       "parameters": {
 	  "project"      : "new",
 	  "input"        : "self.linkToResource",
-	  "lang"         : "self.linkToResourceLanguage",
+	  "lang"         : "self.linkToResourceLanguage"
       },
       "mapping":   {
 	  "input"        : "untokinput_url",
@@ -2014,7 +2014,7 @@ const Registry = [
       "creators": "Maarten van Gompel, Ko van der Sloot (CLST, Radboud University Nijmegen)",
       "contact": {
 	  "person": "Maarten van Gompel",
-	  "email": "proycon@anaproy.nl",
+	  "email": "proycon@anaproy.nl"
       },
       "version": "x.y.z",
       "authentication": "Yes. Before tool use, please register at https://webservices-lst.science.ru.nl/register.",
@@ -2186,7 +2186,7 @@ const Registry = [
 	    "lang": "pl",
 	    "analysis": "wsd"
 	}
-    },
+    }
 ];
 
 export default Registry;
